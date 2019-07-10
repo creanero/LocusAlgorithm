@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
@@ -7,6 +7,45 @@
 \bibitem[{Creaner(2016)}]{creaner2016thesis}
 Creaner, O., 2016. Data mining by grid computing in the search for extrasolar
   planets. Ph.D. thesis, Institute of Technology, Tallaght, Dublin.
+
+\bibitem[{Creaner et~al.(2007)Creaner, Hickey, and Nolan}]{githubrepo}
+Creaner, O., Hickey, E., Nolan, K., 2007. Locus algorithm github repo.
+\newline\urlprefix\url{www.github.com/creaneroDIAS/locus}
+
+\bibitem[{Creaner et~al.(In Press{\natexlab{a}})Creaner, Hickey, and
+  Nolan}]{softwarepaper}
+Creaner, O., Hickey, E., Nolan, K., In Press{\natexlab{a}}. A software system
+  to implement the locus algorithm. Astronomy and Computing.
+
+\bibitem[{Creaner et~al.(In Press{\natexlab{b}})Creaner, Hickey, and
+  Nolan}]{gridsystempaper}
+Creaner, O., Hickey, E., Nolan, K., In Press{\natexlab{b}}. A software system
+  to implement the locus algorithm in a grid computing environment. Astronomy
+  and Computing.
+
+\bibitem[{Creaner et~al.(In Press{\natexlab{c}})Creaner, Hickey, Nolan, and
+  Smith}]{quasarpaper}
+Creaner, O., Hickey, E., Nolan, K., Smith, N., In Press{\natexlab{c}}. A
+  catalogue of pointings for optimal differential photometry for 23,779
+  quasars. Astronomy and Computing.
+
+\bibitem[{Creaner et~al.(In Press{\natexlab{d}})Creaner, Hickey, Nolan, and
+  Smith}]{exopaper}
+Creaner, O., Hickey, E., Nolan, K., Smith, N., In Press{\natexlab{d}}. A
+  catalogue of pointings for optimal differential photometry for 61,662,376
+  stars in the search for extrasolar planets. Astronomy and Computing.
+
+\bibitem[{Creaner et~al.(2019{\natexlab{a}})Creaner, Nolan, and
+  Hickey}]{ZenodoXOPCatalogue}
+Creaner, O., Nolan, K., Hickey, E., May 2019{\natexlab{a}}. Placeholder
+  exoplanet catalogue zenodo link.
+\newline\urlprefix\url{placeholder}
+
+\bibitem[{Creaner et~al.(2019{\natexlab{b}})Creaner, Nolan, and
+  Hickey}]{ZenodoQuasarCatalogue}
+Creaner, O., Nolan, K., Hickey, E., May 2019{\natexlab{b}}. Placeholder quasar
+  catalogue zenodo link.
+\newline\urlprefix\url{placeholder}
 
 \bibitem[{Honeycutt(1992)}]{honeycutt1992ccd}
 Honeycutt, R.~K., 1992. Ccd ensemble photometry on an inhomogeneous set of
