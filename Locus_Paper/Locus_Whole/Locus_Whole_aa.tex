@@ -1,3 +1,8 @@
+
+%
+\documentclass{aa}  
+
+%\documentclass[referee]{aa}
 %\documentclass[]{elsarticle} %review=doublespace preprint=single 5p=2 column
 %%%% Begin My package additions %%%%%%%%%%%%%%%%%%%
 %\usepackage[hyphens]{url}
@@ -11,14 +16,10 @@
 %
 %\bibliographystyle{elsarticle-harv}
 %\biboptions{sort&compress} % For natbib
-%\usepackage{graphicx}
-%\usepackage{booktabs} % book-quality tables
+\usepackage{graphicx}
+\usepackage{booktabs} % book-quality tables
 %%%%%%%%%%%%%%%% end my additions to header
 
-%
-\documentclass{aa}  
-
-%\documentclass[referee]{aa}
 %
 \usepackage{graphicx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,8 +74,9 @@
 %            pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
 
-\usepackage{xcolor}
+%\usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage[table]{xcolor}
 
 \usepackage{gensymb}
 %\setcounter{secnumdepth}{0}
@@ -346,7 +348,7 @@ constant RA and a single line of constant Dec nearest the target star
 as shown in Figure \ref{effective_locus}.
 
 \begin{figure}
-\center{\includegraphics[width=0.47\textwidth]{fig3.png}}
+\center{\includegraphics[width=0.47\textwidth]{fig3b.png}}
 \caption{\label{effective_locus}Each effective locus is defined by assigning a pair
 of RA and Dec coordinates for a corner point and a pair of lines North
 or South and East or West from the corner point. In this diagram, each
@@ -483,7 +485,7 @@ This is achieved as follows:
 \end{itemize}
 
 \begin{figure}[!htb]
-\center{\includegraphics[width=0.47\textwidth]{fig4.png}}
+\center{\includegraphics[width=0.47\textwidth]{fig4b.png}}
 \caption{\label{PoIscores}Points of Intersection (PoI), and their associated
 score. In this diagram each star has a rating of 1, hence the score
 associated with each PoI is equal to the number of reference stars
@@ -491,7 +493,7 @@ within a FoV centred at that PoI.Copied from \citet{creaner2016thesis}}
 \end{figure}
 
 \begin{figure}[!htb]
-\center{\includegraphics[width=0.47\textwidth]{fig5.png}}
+\center{\includegraphics[width=0.47\textwidth]{fig5b.png}}
 \caption{\label{final}Locus Algorithm. Target: white star. Pointing \& FoV:
 blue. Reference stars and their loci: Fully in the FoV: greens. On the
 edge of the FoV: yellows. Outside FoV: reds.  Modified from \citet{creaner2016thesis}}
@@ -513,9 +515,355 @@ coordinates of the optimum pointing for a given target, where optimum
 means a field of view with the maximum number of reference stars which
 are similar in magnitude and colour to the target.
 
-\section{EUGENE'S SECTION}
+
+\section{Example Implementation of the Locus Algorithm}
 \label{example-implementation-of-the-locus-algorithm}
-\textbf{Eugene's reworked section goes here}
+
+To illustrate the operations of the Locus Algorithm, a worked example is
+given here. The process described here in producing an optimal pointing
+for a given star follows the same sequence of steps described in the
+first part of this paper. The process is implemented in the R
+programming language and is geared for reproducible research. The code
+is available on \citet{githubrepo}
+It can be trivially adapted for different target stars and telescope
+parameters.
+
+
+\subsection{Target}
+\label{target}
+
+The star with SDSS ID 1237680117417115655, henceforth called the target,
+(RA = 346.6500 and DEC = -5.0393) is used as the example. This star, in
+the constellation Aquarius, has SDSS magnitudes as given on Table \ref{table:target_mags}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{l|r}
+\hline
+Band & SDSS\_Magnitude\\
+\hline
+u & 17.20\\
+\hline
+g & 15.38\\
+\hline
+r & 14.65\\
+\hline
+i & 14.40\\
+\hline
+z & 14.28\\
+\hline
+\end{tabular}
+ \caption{SDSS \textit{ugriz} Magnitudes for SDSS 1237680117417115655, the target used in the sample implementation of the Locus Algorithm}
+ \label{table:target_mags} 
+\end{table}
+
+The observational parameters are taken from the telescope at
+Blackrock Castle Observatory. This telescope has
+parameters given on Table \ref{table:observational_parameters}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{l|r}
+\hline
+Parameters & Values\\
+\hline
+Field of View in degrees & 0.1667\\
+\hline
+Resolution Limit in degrees & 0.0030\\
+\hline
+Dynamic Range in magnitudes & 2.0000\\
+\hline
+Colour Match Limit & 0.1000\\
+\hline
+\end{tabular}
+ \caption{Observational parameters for the example use of the Locus Algorithm}
+ \label{table:observational_parameters} 
+\end{table}
+
+
+\subsection{Candidate Zone}
+\label{candidate-zone-1}
+
+The size of the FoV when corrected for shortening by declination is given in expression \ref{Rprime_example}, by
+substituting into Expression \ref{Rprime} above.
+
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+&R^\prime &= {\frac{R}{cos(Dec_c)}} \\
+&R^\prime &= {\frac{0.1667\degree}{cos(-5.0393\degree)}} \\
+&R^\prime &= 0.16731\degree{}
+\end{split}
+  \end{equation}
+\caption{\label{Rprime_example}Definition of $R^\prime$ for the target.}
+\end{equ}
+
+The locus of the target is given in Expression \ref{locus_example} by substituting into Expression \ref{FoVDef}.
+
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+ 346.5664\degree \leq RA \leq 346.7337\degree\\
+ -5.1226\degree \leq Dec \leq -4.9560\degree
+\end{split}
+  \end{equation}
+\caption{\label{locus_example}Definition of the locus centred on the target.}
+\end{equ}
+
+
+The candidate zone as defined above is the area of sky within which reference stars can possibly be included in the same field of view as the target. This is four times the size of the FoV and is given in Expression \ref{CZ_example} by substituting into Expression \ref{CZdef} above,
+
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+346.4827\degree \leq RA \leq 346.8173 \degree \\
+-5.2060 \degree \leq Dec \leq -4.8726 \degree
+\end{split}
+  \end{equation}
+\caption{\label{CZ_example}Definition of the Candidate Zone (CZ) centred on the target.}
+\end{equ}
+
+
+
+\subsection{Identification and Filtering of Reference Stars}
+\label{identification-and-filtering-of-reference-stars-1}
+
+The potential reference stars are selected as follows:
+
+\begin{itemize}
+\item
+  Position: Within the Candidate Zone defined in Expression \ref{CZ_example}, SDSS records 1345 separate
+  objects with clean photometry \citep{aguado2019fifteenth}. These are
+  downloaded by an SQL query run on the CAS database, release DR15
+\item
+  Magnitude: as shown in Expression \ref{maglim} the reference star must be within the dynamic range, 2, of
+  the target's magnitude of 14.648, i.e. ${12.648 \leq r \leq 16.648}$. This leaves 41 potential references.
+\item
+  Colour: as shown in Expression \ref{collim}  the reference star must match the colour of the target to
+  within a user-specified limit of 0.1 magnitudes. In this case this means ${0.634 \leq (g-r) \leq 0.834}$ and ${0.149 \leq (r-i) \leq 0.349}$.  This leaves 15 potential references.
+\item
+  Resolvability: the reference star must be resolvable, i.e.~no other
+  star that would impact a brightness measurements within a
+  user-specified resolution limit, in this case 11$^{\prime\prime}$, (0.003\textdegree). Any object this close to a potential reference star and with
+  an \textit{r}-band magnitude which is 5 magnitudes greater than the potential
+  reference or brighter will pollute the light from the potential
+  reference star. This leaves 14 potential references.
+\end{itemize}
+
+These numbers are presented in Table \ref{summary_of_references} below. 
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{l|r}
+\hline
+filters & numbers\\
+\hline
+Position, in Field of View & 1345\\
+\hline
+Correct Magnitude & 41\\
+\hline
+Correct Colour & 15\\
+\hline
+Resolvable & 14\\
+\hline
+In Final Field of View & 7\\
+\hline
+\end{tabular}
+\caption{\label{summary_of_references}A summary of the number of candidate reference stars remaining at each stage.}
+\end{table}
+
+
+Table \ref{candidate_references} gives the 15 stars in the candidate zone.  14 of these are candidate reference stars.  7 of those 14 are used in the calculation of score for the pointing that is ultimately selected.  Also shown in this table is the target itself, hightlighted in green. 
+
+\begin{table*}[!htb]
+\centering
+\begin{tabular}{|l|l||r|r|r|r|r|r|r|r|}
+\hline
+ref. & objID & ra & dec & u & g & r & i & z & ratings\\
+\hline
+\rowcolor[HTML]{D7261E}  \textcolor{white}{\textbf{1}} & \textcolor{white}{\textbf{1237680117417115692}} & \textcolor{white}{\textbf{346.7237}} & \textcolor{white}{\textbf{-5.0473}} & \textcolor{white}{\textbf{18.36}} & \textcolor{white}{\textbf{16.58}} & \textcolor{white}{\textbf{15.84}} & \textcolor{white}{\textbf{15.57}} & \textcolor{white}{\textbf{15.46}} & \textcolor{white}{\textbf{0.7345}}\\
+\hline
+2 & 1237680065885241391 & 346.4833 & -4.9462 & 18.97 & 17.14 & 16.42 & 16.16 & 15.99 & 0.8080\\
+\hline
+\rowcolor[HTML]{D7261E}  \textcolor{white}{\textbf{3}} & \textcolor{white}{\textbf{1237680117417115683}} & \textcolor{white}{\textbf{346.7128}} & \textcolor{white}{\textbf{-5.0499}} & \textcolor{white}{\textbf{17.59}} & \textcolor{white}{\textbf{15.78}} & \textcolor{white}{\textbf{15.11}} & \textcolor{white}{\textbf{14.87}} & \textcolor{white}{\textbf{14.80}} & \textcolor{white}{\textbf{0.3610}}\\
+\hline
+4 & 1237680117417050117 & 346.5378 & -5.0185 & 18.40 & 16.52 & 15.77 & 15.53 & 15.39 & 0.7006\\
+\hline
+5 & 1237680117417181202 & 346.8104 & -4.9749 & 17.46 & 15.62 & 14.85 & 14.58 & 14.44 & 0.5353\\
+\hline
+\rowcolor[HTML]{D7261E}  \textcolor{white}{\textbf{6}} & \textcolor{white}{\textbf{1237680065348435996}} & \textcolor{white}{\textbf{346.7072}} & \textcolor{white}{\textbf{-5.1987}} & \textcolor{white}{\textbf{16.70}} & \textcolor{white}{\textbf{14.70}} & \textcolor{white}{\textbf{13.90}} & \textcolor{white}{\textbf{13.68}} & \textcolor{white}{\textbf{13.52}} & \textcolor{white}{\textbf{0.3220}}\\
+\hline
+7 & 1237680065348501526 & 346.8037 & -5.2019 & 15.88 & 14.15 & 13.39 & 13.15 & 12.99 & 0.6440\\
+\hline
+\rowcolor[HTML]{D7261E}  \textcolor{white}{\textbf{8}} & \textcolor{white}{\textbf{1237680117417050120}} & \textcolor{white}{\textbf{346.5626}} & \textcolor{white}{\textbf{-5.1530}} & \textcolor{white}{\textbf{18.46}} & \textcolor{white}{\textbf{16.50}} & \textcolor{white}{\textbf{15.77}} & \textcolor{white}{\textbf{15.53}} & \textcolor{white}{\textbf{15.40}} & \textcolor{white}{\textbf{0.8298}}\\
+\hline
+\rowcolor[HTML]{0D4A05}  \textcolor{white}{\textbf{10}} & \textcolor{white}{\textbf{1237680117417115655}} & \textcolor{white}{\textbf{346.6500}} & \textcolor{white}{\textbf{-5.0393}} & \textcolor{white}{\textbf{17.20}} & \textcolor{white}{\textbf{15.38}} & \textcolor{white}{\textbf{14.65}} & \textcolor{white}{\textbf{14.40}} & \textcolor{white}{\textbf{14.28}} & \textcolor{white}{\textbf{1.0000}}\\
+\hline
+\rowcolor[HTML]{D7261E}  \textcolor{white}{\textbf{11}} & \textcolor{white}{\textbf{1237680117417115762}} & \textcolor{white}{\textbf{346.6755}} & \textcolor{white}{\textbf{-5.1195}} & \textcolor{white}{\textbf{18.92}} & \textcolor{white}{\textbf{17.02}} & \textcolor{white}{\textbf{16.28}} & \textcolor{white}{\textbf{15.97}} & \textcolor{white}{\textbf{15.85}} & \textcolor{white}{\textbf{0.3804}}\\
+\hline
+\rowcolor[HTML]{D7261E}  \textcolor{white}{\textbf{12}} & \textcolor{white}{\textbf{1237680117417050133}} & \textcolor{white}{\textbf{346.5944}} & \textcolor{white}{\textbf{-5.1611}} & \textcolor{white}{\textbf{16.70}} & \textcolor{white}{\textbf{14.83}} & \textcolor{white}{\textbf{14.07}} & \textcolor{white}{\textbf{13.89}} & \textcolor{white}{\textbf{13.65}} & \textcolor{white}{\textbf{0.2410}}\\
+\hline
+13 & 1237680065885241371 & 346.5598 & -4.9312 & 17.68 & 15.93 & 15.23 & 15.01 & 14.90 & 0.4846\\
+\hline
+14 & 1237680065885306903 & 346.6695 & -4.9149 & 17.72 & 15.65 & 14.90 & 14.69 & 14.45 & 0.4292\\
+\hline
+15 & 1237680117417115701 & 346.7433 & -5.0054 & 18.46 & 16.41 & 15.58 & 15.32 & 15.16 & 0.0683\\
+\hline
+\end{tabular}
+\caption{\label{candidate_references}Details of the candidate reference stars from SDSS.  The
+seven stars highlighted in red are found in the final field of view. The target star itself
+is shown highlighted in green.  Then numbers given in the first column ``ref'' are used to identify the candidate reference stars in the worked examples shown in Subsection \ref{example_loci}.}
+\end{table*}
+
+Table \ref{candidate_references} also includes ratings for each star. This gives a measure of how close, spectrally, each reference star is to the target. This rating hasn't been optimised and is the subject of further research by our group, but for the purpose of this work was calculated as shown in Expression \ref{rating_def}: 
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+  rating =\left( 1- \left|{\frac{\Delta g - \Delta r}{\Delta col_{max}}}\right| \right) \times \left(1-\left|{\frac{\Delta r - \Delta i}{\Delta col_{max}}}\right|\right)
+  \end{split}
+    \end{equation}
+\caption{\label{rating_def}Definition of the rating of a reference star}
+\end{equ}
+
+Where \(\Delta r\) stand for the difference between the r-band magnitude
+for the target and the reference star and $\Delta col_{max}$ is the colour match limit.
+Similarly for \(\Delta g\) and \(\Delta i\).
+
+For example, the star \textit{SDSS1237680117417050120} (Star \#{}8 on Table \ref{candidate_references}) has
+${g_r = 16.498}$, ${r_r = 15.771}$, and $i_r = 15.533$. This compares
+to the target magnitudes of ${g_t = 15.382}$, ${r_t = 14.648}$, and
+${i_t = 14.399}$.
+
+Substituting these into Expression \ref{rating_def} gives the calculation demonstrated in Expression \ref{rating_example}.
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+&\delta g = 16.498 - 15.382 = 1.116 \\
+&\delta r = 15.771 - 14.648 = 1.122 \\
+&\delta i = 15.533 - 14.399 = 1.134 \\
+&  \therefore \\
+&rating = \left(1 - \left| \frac {1.116 - 1.122}{0.1}\right|\right) \times \left(1 - \left|\frac{1.122 - 1.134}{0.1}\right| \right) \\
+&rating = 0.93 \times 0.89 \\
+&rating = 0.83
+  \end{split}
+    \end{equation}
+\caption{\label{rating_example}Definition of the rating of Star \#{}8}
+\end{equ}
+
+\subsection{Identifying the Effective Locus for each Candidate Reference Star}
+\label{example_loci}
+
+Expression \ref{CPDef} defines how the cornerpoints for a given reference can be calculated.  Substituting in for   Star \#{}8, the resulting corner point is calculated as shown in Expression \ref{CP_example}
+
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+	&if:& RA_r < RA_t \\
+	&&\implies RA_c = RA_r + \frac{R^\prime}{2}  \\
+	&because:& 346.5626\degree < 346.6500\degree - + 0.0837\degree \\
+	&&\implies RA_{c,8} = 346.5626\degree \\ 
+	&&RA_{c,8} =346.6463\degree  \\
+	&and\\
+	&if:& Dec_r < Dec_t \\
+	&&\implies Dec_c = Dec_r + \frac{S}{2} \\
+	&because:& -5.1530\degree < -5.0393\degree \\
+	&&\implies Dec\textsubscript{c,8} = -5.1530\degree + 0.0833\degree \\
+	&&Dec\textsubscript{c,8} = -5.0697\degree
+  \end{split}
+    \end{equation}
+\caption{\label{CP_example}Definition of the corner-point of the effective locus for Reference Star 8}
+\end{equ}
+
+From Expression \ref{DirDef}, the direction the locus must be drawn from the corner point to generate the locus can be determined.  Applying this to  Star \#{}8 gives the values shown in Expression \ref{Dir_example}
+
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+&if: RA_{r} < RA{t} \implies DirDec = -ive\\
+&because: 346.5626\degree < 346.6500\degree \implies DirDec_{8} = -ive\\
+&and\\ 
+&if: Dec_{r} < Dec_{t} \implies DirRA = -ive\\
+&because: -5.1530\degree < -5.0393\degree \implies DirRA_{8} = -ive
+  \end{split}
+    \end{equation}
+\caption{\label{Dir_example}Definition of the directions of the lines drawn from the corner-point of the effective locus for Star \#{}8}
+\end{equ}
+
+Repeating this calculation for SDSS1237680065348435996 (Star \#{}6 from Table \ref{candidate_references}) gives the values shown on Table \ref{example_targets}.  These two reference stars are used to calculate Points of Intersection (PoI) in Subsection \ref{PoI_example}
+
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{quantity} & \textbf{Ref \#{}6} & \textbf{Ref \#{}8}\\
+\hline \hline
+$RA_c$ & $346.6235\degree$ & $346.6463\degree$ \\
+\hline
+$Dec_c$ & $-5.1153\degree$ & $-5.0697\degree$ \\
+\hline
+$DirRA$ & $-ive$ & $-ive$ \\
+\hline
+$DirDec$ & $+ive$ & $-ive$ \\
+
+\hline
+\end{tabular}
+\caption{\label{example_targets}A summary of the defining parameters of the effective loci for example  Stars \#{}6 and \#{}8}
+\end{table}
+
+\subsection{Identifying and Scoring Points of Intersection and identifying the pointing.}
+\label{PoI_example}
+
+We can compare these two effective loci to see if they intersect to form a valid PoI. 
+Expression \ref{PoICheck} shows some examples of how a valid PoI can be determined.  Applying this process to Stars \#{}6 and \#{}8 gives Expression \ref{PoI_example_expr}:
+
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+  &DirRA_{8} =+ive,\ DirDec_{6}=-ive \\
+  &RA_{r,8} < RA_{r,6}\ and\ Dec_{r,8} > Dec_{r,6} \\
+  &\implies \\
+&PoI\ exist\ at :\\
+&(RA, Dec) = (RA_{c,6}, Dec_{c,8})\\
+&(RA, Dec) = (346.6463\degree, -5.1153\degree)\\
+  \end{split}
+    \end{equation}
+\caption{\label{PoI_example_expr}Definition of the PoI between the effective Loci of Stars \#{}6 and \#{}8}
+\end{equ}
+
+
+From Expression \ref{FoVDef}, the FoV centred on the PoI ${(346.6463\degree,\ -5.1153\degree)}$ can be calculated to be as shown in Expression \ref{FoV_example}
+\begin{equ}[!h]
+  \begin{equation}
+  \begin{split}
+  &RA_c - {\frac{R^\prime}{2}} \leq RA \leq RA_c + {\frac{R^\prime}{2}} 
+  \\  & \implies 346.6463\degree - 0.0837\degree \leq RA \leq 346.6463\degree + 0.0837\degree \\
+ &346.5626\degree \leq RA \leq 346.7299\degree \\
+ &and: \\
+  &Dec_c - {\frac{S}{2}} \leq Dec \leq Dec_c + {\frac{S}{2}} \\
+  &-5.1153\degree - 0.0833\degree \leq Dec \leq -5.1153\degree + 0.0833\degree \\
+  &-5.1987\degree \leq Dec \leq -5.0320\degree
+  \end{split}
+    \end{equation}
+\caption{\label{FoV_example}Definition of the FoV centred on the PoI between the effective Loci of Stars \#{}6 and \#{}8}
+\end{equ}  
+
+The locus associated with each of these 14 potential references is identified and the Points of Intersection associated with these locii are calculated. This leads to the situation shown in Figure \ref{candidate_plot}.
+
+\begin{figure}[!htb]
+\center{\includegraphics[trim={0 9.75cm 0 6cm},clip,width=0.47\textwidth]{Locus_Whole_files/figure-latex/candidate_plot-1.pdf}
+}
+\caption{\label{candidate_plot}Candidate plot placeholder label}
+\end{figure}
+
+All these 38 points of intersection are checked in turn as potential pointings. For each one, a field of view is constructed and all the potential reference stars within each one are identified. This is used to calculate a score for each point of intersection. For the star, SDSS1237680117417115655, an optimised pointing was thus discovered with ${RA = 346.6463\degree},\ {Dec = -5.1153\degree}$ The field of view centered on this pointing included both the target and 7 reference stars. This pointing is calculated to have a score of 3.87 and is illustrated in Figure \ref{locus_plot}.
+
+\begin{figure}[!htb]
+\center{\includegraphics[trim={0 7.5cm 0 11cm},clip,width=0.47\textwidth]{Locus_Whole_files/figure-latex/locus_plot-1.pdf}
+}
+\caption{\label{locus_plot}Locus plot placeholder label}
+\end{figure}
+
 
 \section{Applications of the Algorithm}
 \label{Applications}
