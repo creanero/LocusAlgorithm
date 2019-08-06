@@ -853,7 +853,7 @@ By submitting many targets at once, the optimum pointing for each can be determi
 \section{Conclusions}
 \label{Conclusions}
 
-This paper presents the locus algorithm, a novel system for the identification of optimal pointings for differential photometry given a set of parameters of the planned observation provided by the user. The algorithm is presented in in two stages. In the first stage, the concept of the algorithm is laid out and the steps of the algorithm are defined. In the second stage, a fully-worked example is shown applying the algorithm to the star \textit{SDSS1237680117417115655} for a 10$^\prime$ FoV. The premise of the algorithm is that a locus can be defined about any target or reference star, upon which a Field of View (FoV) can be centred and include that object at the edge of the FoV. At the Points of Intersection (PoI) between these loci, the set of targets which can be included in a FoV changes if the FoV moves in any direction. Therefore, these PoI are the essential points to compare when
+This paper presents the locus algorithm, a novel system for the identification of optimal pointings for differential photometry given a set of parameters of the planned observation provided by the user. The algorithm is presented in two stages. In the first stage, the concept of the algorithm is laid out and the steps of the algorithm are defined. In the second stage, a fully-worked example is shown applying the algorithm to the star \textit{SDSS1237680117417115655} for a 10$^\prime$ FoV. The premise of the algorithm is that a locus can be defined about any target or reference star, upon which a Field of View (FoV) can be centred and include that object at the edge of the FoV. At the Points of Intersection (PoI) between these loci, the set of targets which can be included in a FoV changes if the FoV moves in any direction. Therefore, these PoI are the essential points to compare when
 determining the maximum number and quality of reference stars which can be included in a FoV of a given size.
 
 \subsection{Summary of Algorithm}
@@ -897,7 +897,7 @@ applied as outlined below
 
 \textbf{Calculate Score}: Score is calculated by identifying the candidate reference stars which can be included in an FoV centred on each PoI and summing their ratings. For example, for the PoI between stars \#{}6 and \#{}8 above, seven candidate reference stars can be included in the FoV and their ratings sum to 3.87.
 
-\textbf{Output Optimum Pointing}: By comparing the scores for each PoI, the one with the highest score can be determined to be the pointing used in this example at at (${RA=346.6463\degree}, {Dec = -5.1153\degree}$) and ${Score = 3.87}$.
+\textbf{Output Optimum Pointing}: By comparing the scores for each PoI, the one with the highest score can be determined to be the pointing used in this example at (${RA=346.6463\degree}, {Dec = -5.1153\degree}$) and ${Score = 3.87}$.
 
 
 \section{Further developments}
