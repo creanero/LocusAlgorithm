@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  13 AUG 2019 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  13 AUG 2019 19:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1489,11 +1489,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Here is how much of TeX's memory you used:
  10639 strings out of 492982
  155824 string characters out of 6134896
- 287102 words of memory out of 5000000
+ 286102 words of memory out of 5000000
  13724 multiletter control sequences out of 15000+600000
  128242 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,47p,1706b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,16n,47p,1704b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/
 share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/
 lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/tex
@@ -1513,7 +1513,7 @@ are/texmf/fonts/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/txfonts/txsya.pfb>
-Output written on Locus_Whole_aa.pdf (10 pages, 687440 bytes).
+Output written on Locus_Whole_aa.pdf (10 pages, 687875 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  116 compressed objects within 2 object streams

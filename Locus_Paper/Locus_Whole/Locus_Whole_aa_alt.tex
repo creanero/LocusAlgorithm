@@ -140,7 +140,7 @@ Cork Institute of Technology, Bishopstown, Cork, Ireland}
 
 Photometric variability studies involve identifying variations in the brightness of celestial objects as a function of time. Intrinsic variability can occur on timescales from milliseconds to years and in some instances is a critical tool in allowing competing theoretical models to be assessed. For example, time-resolved precision photometry has the potential to infer very small scale structures in astrophysical jets at a scale which is not possible with direct imaging \citep{smith2008emccd}. Alternatively, precision photometry can detect Earth-sized planets around M-type stars via the transit method \citep{giltinan2011using,everett2001technique}.  Variability which is non-repeatable in nature, such as in astrophysical jets, is the most difficult to quantify and places the greatest requirements for the reliability of the photometry being as high as possible. 
 
-The Earth’s atmosphere causes incoherent wavelength-dependent variations in the flux detected from a source on timescales from 10ms upwards. If uncorrected, this can appear as intrinsic variability, leading to erroneous conclusions about the structure of a source and the underlying astrophysical drivers \citep{smith2008emccd}. Differential photometry, in which a target is compared to a number of reference stars, attempts to minimise extrinsic effects atmospheric by comparing the brightness of a target to reference stars in the same Field of View (FOV). The assumption is that stars which are spatially close to the target undergo the same atmospheric influences as the target itself \citep{burdanov2014astrokit}. If the stars are of similar brightness and colour as the target, then any effects of the atmosphere distributed across very short spatial scales should equally affect all objects in the FoV \citep{young1991precise,howell2006handbook}. Clearly, the more similar the objects in the FoV used to determine the photometry, the less likely it is that the atmosphere will play a major role in determining the precision. However, photon-limited precisions are rarely achieved in practice, indicating that the removal of atmospheric effects even amongst objects which are spatially close, is limited by the atmospheric conditions at the time of the observations in a complicated way \citep{everett2001technique,howell2002some}.   It has been shown that the general approach to differential photometry can be improved upon by taking very short integrations and selecting those time periods in which the atmosphere is most stable \citep{giltinan2011using}.
+The Earth's atmosphere causes incoherent wavelength-dependent variations in the flux detected from a source on timescales from 10ms upwards. If uncorrected, this can appear as intrinsic variability, leading to erroneous conclusions about the structure of a source and the underlying astrophysical drivers \citep{smith2008emccd}. Differential photometry, in which a target is compared to a number of reference stars, attempts to minimise extrinsic effects atmospheric by comparing the brightness of a target to reference stars in the same Field of View (FoV). The assumption is that stars which are spatially close to the target undergo the same atmospheric influences as the target itself \citep{burdanov2014astrokit}. If the stars are of similar brightness and colour as the target, then any effects of the atmosphere distributed across very short spatial scales should equally affect all objects in the FoV \citep{young1991precise,howell2006handbook}. Clearly, the more similar the objects in the FoV used to determine the photometry, the less likely it is that the atmosphere will play a major role in determining the precision. However, photon-limited precisions are rarely achieved in practice, indicating that the removal of atmospheric effects even amongst objects which are spatially close, is limited by the atmospheric conditions at the time of the observations in a complicated way \citep{everett2001technique,howell2002some}.   It has been shown that the general approach to differential photometry can be improved upon by taking very short integrations and selecting those time periods in which the atmosphere is most stable \citep{giltinan2011using}.
 
 Despite the knowledge that reference stars which are similar to the source provide the best approach, there has been no systematic attempt to define the optimum FoV around a target source in which parameters such as colour, magnitude, field-crowding and field orientation have been used to determine the optimum pointings. Here we describe an algorithm, the Locus Algorithm, which identifies the pointing for the which the resultant observational FoV includes the target and the most photometrically appropriate reference stars available.
 
@@ -766,8 +766,8 @@ Expression \ref{CPDef} defines how the corner points for a given reference can b
   \begin{split}
 	&if:& RA_r < RA_t \\
 	&&\implies RA_c = RA_r + \frac{R^\prime}{2}  \\
-	&because:& 346.5626\degree < 346.6500\degree - + 0.0837\degree \\
-	&&\implies RA_{c,8} = 346.5626\degree \\ 
+	&because:& 346.5626\degree < 346.6500\degree \\
+	&&\implies RA_{c,8} = 346.5626\degree  + 0.0837\degree\\ 
 	&&RA_{c,8} =346.6463\degree  \\
 	&and\\
 	&if:& Dec_r < Dec_t \\
@@ -785,7 +785,7 @@ From Expression \ref{DirDef}, the direction the locus must be drawn from the cor
 \begin{equ}[!htb]
   \begin{equation}
   \begin{split}
-&if: RA_{r} < RA{t} \implies DirDec = -ive\\
+&if: RA_{r} < RA_{t} \implies DirDec = -ive\\
 &because: 346.5626\degree < 346.6500\degree \implies DirDec_{8} = -ive\\
 &and\\ 
 &if: Dec_{r} < Dec_{t} \implies DirRA = -ive\\
@@ -826,8 +826,8 @@ Expression \ref{PoICheck} shows some examples of how a valid PoI can be determin
   &RA_{r,8} < RA_{r,6}\ and\ Dec_{r,8} > Dec_{r,6} \\
   &\implies \\
 &PoI\ exist\ at :\\
-&(RA, Dec) = (RA_{c,6}, Dec_{c,8})\\
-&(RA, Dec) = (346.6463\degree, -5.1153\degree)\\
+&(RA_p, Dec_p) = (RA_{c,6}, Dec_{c,8})\\
+&(RA_p, Dec_p) = (346.6463\degree, -5.1153\degree)\\
   \end{split}
     \end{equation}
 \caption{\label{PoI_example_expr}Definition of the PoI between the effective Loci of Stars \#{}6 and \#{}8}
@@ -838,11 +838,11 @@ From Expression \ref{FoVDef}, the FoV centred on the PoI ${(346.6463\degree,\ -5
 \begin{equ}[!htb]
   \begin{equation}
   \begin{split}
-  &RA_c - {\frac{R^\prime}{2}} \leq RA \leq RA_c + {\frac{R^\prime}{2}} 
+  &RA_p - {\frac{R^\prime}{2}} \leq RA \leq RA_p + {\frac{R^\prime}{2}} 
   \\  & \implies 346.6463\degree - 0.0837\degree \leq RA \leq 346.6463\degree + 0.0837\degree \\
  &346.5626\degree \leq RA \leq 346.7299\degree \\
  &and: \\
-  &Dec_c - {\frac{S}{2}} \leq Dec \leq Dec_c + {\frac{S}{2}} \\
+  &Dec_p - {\frac{S}{2}} \leq Dec \leq Dec_p + {\frac{S}{2}} \\
   &-5.1153\degree - 0.0833\degree \leq Dec \leq -5.1153\degree + 0.0833\degree \\
   &-5.1987\degree \leq Dec \leq -5.0320\degree
   \end{split}
@@ -892,7 +892,7 @@ The algorithmic description can be summarised in the following nine steps:
 
 \textbf{Define a Candidate Zone}: identify all stars which could be included in a FoV with the target by translating the position of the FoV in accordance with Expression \ref{CZdef}, which defines the Candidate Zone (CZ).
 
-\textbf{Filter Candidate References}: for each star in the CZ, apply the filtering criteria magnitude, colour and resolution (Expressions \ref{maglim} and \ref{collim} to identify the candidate reference stars.
+\textbf{Filter Candidate References}: for each star in the CZ, apply the filtering criteria magnitude, colour and resolution (Expressions \ref{maglim} and \ref{collim}) to identify the candidate reference stars.
 
 \textbf{Calculate Rating}: for each candidate reference star, a rating is calculated to indicate how closely its colour matches that of the target in accordance with \ref{rating_def}.
 
@@ -919,7 +919,7 @@ For demonstration purposes, this algorithm has been applied to \textit{SDSS12376
 
 \textbf{Calculate Loci}: For each of the 14 candidate reference stars, a locus is calculated, for example for Star \#{}8, the locus is defined by ${RA_c=346.6463\degree{}}$ ${Dec_c=5.0697\degree{}}$, ${DirRA = -ive}$ and ${DirDec = -ive}$.
 
-\textbf{Identify Points of Intersection}: Given 14 candidate reference stars and their corresponding Loci, there are 364 possible combinations that could be a PoI, which are generated by combining the coordinates of the cornerpoints of the Loci in pairs and checking the directions of the lines from each to determine whether a PoI actually exists.  PoI actually exist in 38 cases. For example, a PoI exists between the loci for Stars \#{}6 and \#{}8 at (${RA=346.6463\degree}, {Dec = -5.1153\degree}$).
+\textbf{Identify Points of Intersection}: Given 14 candidate reference stars and their corresponding Loci, there are 364 possible combinations that could be a PoI, which are generated by combining the coordinates of the corner-points of the Loci in pairs and checking the directions of the lines from each to determine whether a PoI actually exists.  PoI actually exist in 38 cases. For example, a PoI exists between the loci for Stars \#{}6 and \#{}8 at (${RA=346.6463\degree}, {Dec = -5.1153\degree}$).
 
 \textbf{Calculate Score}: Score is calculated by identifying the candidate reference stars which can be included in an FoV centred on each PoI and summing their ratings. For example, for the PoI between stars \#{}6 and \#{}8 above, seven candidate reference stars can be included in the FoV and their ratings sum to 3.87.
 
@@ -927,7 +927,7 @@ For demonstration purposes, this algorithm has been applied to \textit{SDSS12376
 
 
 \section{Further developments}
-A software system has been developed to implement this algorithm and is available from \citet{githubrepo}. A paper describing the software has been submitted at \citet{softwarepaper}. Scaling that software to allow for large-scale use required the use a Grid Computing solution, described at \citet{gridsystempaper}. By supplying a set of quasars from the 4 th Quasar Catalogue of the Sloan Digital Sky Survey (SDSS) as targets and the remainder of SDSS as potential reference stars, it was possible to generate a catalogue of optimised pointings for 26779 quasars as per \citet{quasarpaper,ZenodoQuasarCatalogue}. Using all of the stars in SDSS as targets allowed for the optimum pointing to be determined for all such stars. These pointings are of use, for example, in the search for extrasolar planets by the transit method, where high-precision differential photometry is required \citep{exopaper,ZenodoXOPCatalogue}.
+A software system has been developed to implement this algorithm and is available from \citet{githubrepo}. A paper describing the software has been submitted at \citet{softwarepaper}. Scaling that software to allow for large-scale use required the use a Grid Computing solution, described at \citet{gridsystempaper}. By supplying a set of quasars from the 4\textsuperscript{th} Quasar Catalogue of the Sloan Digital Sky Survey (SDSS) as targets and the remainder of SDSS as potential reference stars, it was possible to generate a catalogue of optimised pointings for 26779 quasars as per \citet{quasarpaper,ZenodoQuasarCatalogue}. Using all of the stars in SDSS as targets allowed for the optimum pointing to be determined for all such stars. These pointings are of use, for example, in the search for extrasolar planets by the transit method, where high-precision differential photometry is required \citep{exopaper,ZenodoXOPCatalogue}.
 
 
 \begin{acknowledgements}
