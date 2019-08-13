@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: Locus_Whole_aa.aux
+The top-level auxiliary file: Locus_Whole_aa_alt.aux
 The style file: aa.bst
 Database file #1: Locus_Whole_bibtex.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
@@ -10,7 +10,7 @@ while executing---line 1684 of file aa.bst
 Warning--empty pages in knitr3
 You've used 22 entries,
             3039 wiz_defined-function locations,
-            782 strings with 8641 characters,
+            782 strings with 8649 characters,
 and the built_in function-call counts, 9948 in all, are:
 = -- 844
 > -- 728

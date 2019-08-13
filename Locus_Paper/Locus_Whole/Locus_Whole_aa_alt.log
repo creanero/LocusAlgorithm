@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  13 AUG 2019 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  13 AUG 2019 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Locus_Whole_aa
-(./Locus_Whole_aa.tex
+**Locus_Whole_aa_alt
+(./Locus_Whole_aa_alt.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./aa.cls
@@ -1079,8 +1079,8 @@ Package newfloat Info: New float `equ' with options `' on input line 88.
 \newfloat@ftype=\count134
 Package newfloat Info: float type `equ'=8 on input line 88.
 
-(./Locus_Whole_aa.aux)
-\openout1 = `Locus_Whole_aa.aux'.
+(./Locus_Whole_aa_alt.aux)
+\openout1 = `Locus_Whole_aa_alt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 94.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 94.
@@ -1364,12 +1364,22 @@ Package pdftex.def Info: fig1.png  used on input line 174.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 201.
  [2 <./fig1.png>]
+Overfull \hbox (1.12645pt too wide) detected at line 354
+[]
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <fig3b.png, id=29, 1894.07625pt x 1866.975pt>
 File: fig3b.png Graphic file (type png)
 <use fig3b.png>
 Package pdftex.def Info: fig3b.png  used on input line 369.
 (pdftex.def)             Requested size: 246.06006pt x 242.51585pt.
- [3 <./fig3b.png>]
+[3 <./fig3b.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <fig4b.png, id=37, 1903.11pt x 1791.69376pt>
 File: fig4b.png Graphic file (type png)
 <use fig4b.png>
@@ -1380,7 +1390,6 @@ File: fig5b.png Graphic file (type png)
 <use fig5b.png>
 Package pdftex.def Info: fig5b.png  used on input line 522.
 (pdftex.def)             Requested size: 246.06006pt x 232.34584pt.
-
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 578--578
 []\T1/lmr/m/n/10 (+20) Table 1: |SDSS \T1/lmr/m/it/10 (+20) ugriz \T1/lmr/m/n/1
@@ -1425,12 +1434,18 @@ Underfull \hbox (badness 2707) in paragraph at lines 798--799
 m Ta-ble 4[])
  []
 
-[6]
+
+Underfull \vbox (badness 7116) has occurred while \output is active []
+
+ [6]
 Underfull \hbox (badness 1043) in paragraph at lines 837--852
 []\T1/lmr/m/n/10 (+20) From Ex-pres-sion 3[], the FoV cen-tred on the PoI
  []
 
-<Locus_Whole_files/figure-latex/candidate_plot-1.pdf, id=52, 469.755pt x 867.24
+
+Underfull \vbox (badness 3260) has occurred while \output is active []
+
+<Locus_Whole_files/figure-latex/candidate_plot-1.pdf, id=51, 469.755pt x 867.24
 pt>
 File: Locus_Whole_files/figure-latex/candidate_plot-1.pdf Graphic file (type pd
 f)
@@ -1438,13 +1453,18 @@ f)
 Package pdftex.def Info: Locus_Whole_files/figure-latex/candidate_plot-1.pdf  u
 sed on input line 856.
 (pdftex.def)             Requested size: 246.06006pt x 219.53038pt.
-[7]
-<Locus_Whole_files/figure-latex/locus_plot-1.pdf, id=58, 469.755pt x 867.24pt>
+<Locus_Whole_files/figure-latex/locus_plot-1.pdf, id=53, 469.755pt x 867.24pt>
 File: Locus_Whole_files/figure-latex/locus_plot-1.pdf Graphic file (type pdf)
 <use Locus_Whole_files/figure-latex/locus_plot-1.pdf>
 Package pdftex.def Info: Locus_Whole_files/figure-latex/locus_plot-1.pdf  used 
 on input line 864.
 (pdftex.def)             Requested size: 246.06006pt x 178.54541pt.
+
+Underfull \vbox (badness 1062) has occurred while \output is active []
+
+ [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [8 <./Locus_Whole_files/figure-latex/candidate_plot-1.pdf> <./Locus_Whole_file
 s/figure-latex/locus_plot-1.pdf>]
 Underfull \hbox (badness 4416) in paragraph at lines 910--911
@@ -1479,44 +1499,39 @@ Underfull \hbox (badness 4378) in paragraph at lines 916--917
 \T1/lmr/m/n/10 (+20) ria ($[]$), ($[]$) and
  []
 
-(./Locus_Whole_aa.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[9] (./Locus_Whole_aa_alt.bbl) [10
 
- [9])
-[10
-
-] (./Locus_Whole_aa.aux) ) 
+] (./Locus_Whole_aa_alt.aux) ) 
 Here is how much of TeX's memory you used:
- 10639 strings out of 492982
- 155824 string characters out of 6134896
- 287102 words of memory out of 5000000
+ 10635 strings out of 492982
+ 155826 string characters out of 6134896
+ 294106 words of memory out of 5000000
  13724 multiletter control sequences out of 15000+600000
- 128242 words of font info for 199 fonts, out of 8000000 for 9000
+ 128029 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,47p,1706b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/
-share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/
-lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/tex
-mf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1
-.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmro9.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/txfonts/txsya.pfb>
-Output written on Locus_Whole_aa.pdf (10 pages, 687440 bytes).
+ 41i,14n,47p,1710b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/
+usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmro9.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmtt9.pfb>
+Output written on Locus_Whole_aa_alt.pdf (10 pages, 686952 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 162 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  45611 words of extra memory for PDF output out of 51595 (max. 10000000)
 

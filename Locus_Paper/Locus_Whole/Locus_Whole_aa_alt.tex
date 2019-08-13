@@ -336,24 +336,24 @@ identified.
 \end{equ}
 
 For each star which passes these filters, a \textit{rating} is calculated.  The calculation is a modular element of the algorithm, and can be modified to suit the needs of a given observer. The rating system gives a measure of how close, spectrally, each reference star is to the target as shown in Expression \ref{rating_def}. 
-\begin{equ}[!htb]
-  \begin{equation}
-  \begin{split}
-  R =\left( 1- \left|{\frac{\Delta g - \Delta r}{\Delta col_{max}}}\right| \right) \times \left(1-\left|{\frac{\Delta r - \Delta i}{\Delta col_{max}}}\right|\right)
-  \end{split}
-    \end{equation}
-\caption{\label{rating_def}Definition of the rating (\textit{R}) of a reference star.  \textit{g}, \textit{r} and \textit{i} are SDSS magnitudes. ${\Delta}$ represents a difference between the target and a given reference star. ${\Delta col_{max}}$ is the maximum permitted colour difference.}
-\end{equ}
-
-%\begin{equ}[!h]
-%\begin{align*}
-%C_{l}&= r-i &&& C_{s}&= g-r \\
-%\Delta{}C_{l}&= C_{l,t} -  C_{l,r} &&& \Delta{}C_{s}&= C_{s,t} -  C_{s,r} \\
-%R_{l}&= 1 - \left | \frac{\Delta{}C_{l}}{\Delta{}C_{max}}\right | &&& R_{s}&= 1 - \left | \frac{\Delta{}C_{s}}{\Delta{}C_{max}}\right | \\
-%&& R&=R_{l}\times{}R_{s}  &&
-%\end{align*}
-%\caption{\label{rating_def}Definition of the scoring system as used in the generation of the Quasar Catalogue. \textit{g}, \textit{r} and \textit{i} are SDSS magnitudes.  \textit{C} refers to colour indices.  Subscript \textit{l} and \textit{s} refer to long- and short-wavelength colour indices respectively.  Subscript \textit{t} refers to the target, while subscript \textit{r} refers to a reference.  \textit{R} refers to a Rating.}
+%\begin{equ}[!htb]
+%  \begin{equation}
+%  \begin{split}
+%  R =\left( 1- \left|{\frac{\Delta g - \Delta r}{\Delta col_{max}}}\right| \right) \times \left(1-\left|{\frac{\Delta r - \Delta i}{\Delta col_{max}}}\right|\right)
+%  \end{split}
+%    \end{equation}
+%\caption{\label{rating_def}Definition of the rating (\textit{R}) of a reference star.  \textit{g}, \textit{r} and \textit{i} are SDSS magnitudes. ${\Delta}$ represents a difference between the target and a given reference star. ${\Delta col_{max}}$ is the maximum permitted colour difference.}
 %\end{equ}
+
+\begin{equ}[!h]
+\begin{align*}
+C_{l}&= r-i &&& C_{s}&= g-r \\
+\Delta{}C_{l}&= C_{l,t} -  C_{l,r} &&& \Delta{}C_{s}&= C_{s,t} -  C_{s,r} \\
+R_{l}&= 1 - \left | \frac{\Delta{}C_{l}}{\Delta{}C_{max}}\right | &&& R_{s}&= 1 - \left | \frac{\Delta{}C_{s}}{\Delta{}C_{max}}\right | \\
+&& R&=R_{l}\times{}R_{s}  &&
+\end{align*}
+\caption{\label{rating_def}Definition of the scoring system as used in the generation of the Quasar Catalogue. \textit{g}, \textit{r} and \textit{i} are SDSS magnitudes.  \textit{C} refers to colour indices.  Subscript \textit{l} and \textit{s} refer to long- and short-wavelength colour indices respectively.  Subscript \textit{t} refers to the target, while subscript \textit{r} refers to a reference.  \textit{R} refers to a Rating.}
+\end{equ}
 
 \subsection{Identifying the Effective Locus for each Candidate Reference Star}
 \label{identifying-the-effective-locus-for-each-candidate-reference-star}
@@ -724,37 +724,37 @@ ${g_r = 16.498}$, ${r_r = 15.771}$, and $i_r = 15.533$. This compares
 to the target magnitudes of ${g_t = 15.382}$, ${r_t = 14.648}$, and
 ${i_t = 14.399}$.  Substituting these into Expression \ref{rating_def} gives the calculation demonstrated in Expression \ref{rating_example}.
 
-\begin{equ}[!htb]
-  \begin{equation}
-  \begin{split}
-&\Delta g = 16.498 - 15.382 = 1.116 \\
-&\Delta r = 15.771 - 14.648 = 1.122 \\
-&\Delta i = 15.533 - 14.399 = 1.134 \\
-&  \therefore \\
-&rating = \left(1 - \left| \frac {1.116 - 1.122}{0.1}\right|\right) \times \left(1 - \left|\frac{1.122 - 1.134}{0.1}\right| \right) \\
-&rating = 0.93 \times 0.89 \\
-&rating = 0.83
-  \end{split}
-    \end{equation}
-\caption{\label{rating_example}Definition of the rating of Star \#{}8}
-\end{equ}
-
-%\begin{equ}[!h]
-%\begin{align*}
-%C_{l,r}&= r_r-i_r&= 15.771&-15.533&= 0.238 &\\
-%C_{l,t}&= r_t-i_t&= 14.648&-14.399&= 0.249 &\\
-%\Delta{}C_{l}&= C_{l,r} -C_{l,t}&= 0.249 &-  0.238&= 0.011  &\\
-%R_{l}&= 1 - \left | \frac{\Delta{}C_{l}}{\Delta{}C_{max}}\right |&= 1 &- \left | \frac{0.011}{0.1}\right |&= 0.89 &\\
-%\\
-%C_{s,r}&= g_r-r_r&= 16.498&-15.771&= 0.727 &\\
-%C_{s,t}&= r_r-i_r&= 115.382&-14.648&= 0.734 &\\
-%\Delta{}C_{s}&= C_{s,r} -C_{s,t}&= 0.727 &-  0.734&= -0.007 &\\
-% R_{s}&= 1 - \left | \frac{\Delta{}C_{s}}{\Delta{}C_{max}}\right |&= 1 &- \left | \frac{0.007}{0.1}\right |&= 0.93 &\\
-% \\
-%R&= R_{l}\times{}R_{s}&= 0.89&\times{}0.93&= 0.83 &
-%\end{align*}
+%\begin{equ}[!htb]
+%  \begin{equation}
+%  \begin{split}
+%&\Delta g = 16.498 - 15.382 = 1.116 \\
+%&\Delta r = 15.771 - 14.648 = 1.122 \\
+%&\Delta i = 15.533 - 14.399 = 1.134 \\
+%&  \therefore \\
+%&rating = \left(1 - \left| \frac {1.116 - 1.122}{0.1}\right|\right) \times \left(1 - \left|\frac{1.122 - 1.134}{0.1}\right| \right) \\
+%&rating = 0.93 \times 0.89 \\
+%&rating = 0.83
+%  \end{split}
+%    \end{equation}
 %\caption{\label{rating_example}Definition of the rating of Star \#{}8}
 %\end{equ}
+
+\begin{equ}[!h]
+\begin{align*}
+C_{l,r}&= r_r-i_r&= 15.771&-15.533&= 0.238 &\\
+C_{l,t}&= r_t-i_t&= 14.648&-14.399&= 0.249 &\\
+\Delta{}C_{l}&= C_{l,r} -C_{l,t}&= 0.249 &-  0.238&= 0.011  &\\
+R_{l}&= 1 - \left | \frac{\Delta{}C_{l}}{\Delta{}C_{max}}\right |&= 1 &- \left | \frac{0.011}{0.1}\right |&= 0.89 &\\
+\\
+C_{s,r}&= g_r-r_r&= 16.498&-15.771&= 0.727 &\\
+C_{s,t}&= r_r-i_r&= 115.382&-14.648&= 0.734 &\\
+\Delta{}C_{s}&= C_{s,r} -C_{s,t}&= 0.727 &-  0.734&= -0.007 &\\
+ R_{s}&= 1 - \left | \frac{\Delta{}C_{s}}{\Delta{}C_{max}}\right |&= 1 &- \left | \frac{0.007}{0.1}\right |&= 0.93 &\\
+ \\
+R&= R_{l}\times{}R_{s}&= 0.89&\times{}0.93&= 0.83 &
+\end{align*}
+\caption{\label{rating_example}Definition of the rating of Star \#{}8}
+\end{equ}
 
 \subsection{Identifying the Effective Locus for each Candidate Reference Star}
 \label{example_loci}
