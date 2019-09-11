@@ -320,7 +320,7 @@ identified.
 \begin{equ}[!htb]
   \begin{equation}
 \begin{split}
-&mag_t - \Delta mag \leq mag_r \leq mag_t + \Delta mag \\
+&mag_t - \Delta mag < mag_r < mag_t + \Delta mag \\
 \end{split}
   \end{equation}
 \caption{\label{maglim}Definition of the limits of mag difference between the target and references.}
@@ -329,13 +329,13 @@ identified.
 \begin{equ}[!htb]
   \begin{equation}
 \begin{split}
-&col_t - \Delta col \leq col_r \leq col_t + \Delta col \\
+&col_t - \Delta col < col_r < col_t + \Delta col \\
 \end{split}
   \end{equation}
 \caption{\label{collim}Definition of the limits of colour difference between the target and references.}
 \end{equ}
 
-For each star which passes these filters, a \textit{rating} is calculated.  The calculation is a modular element of the algorithm, and can be modified to suit the needs of a given observer. The rating system gives a measure of how close, spectrally, each reference star is to the target as shown in Expression \ref{rating_def}. 
+For each star which passes these filters, a \textit{rating} is calculated.  The calculation is a modular element of the algorithm, and can be modified to suit the needs of a given observer. The rating system gives a measure of how close, spectrally, each reference star is to the target as shown in Expression \ref{rating_def}. these ratings are calculated by first calculating the colour indices for the target and the reference using the next longer-wavelength filter (col\textsubscript{l}) and the next shorter-wavelength filter (col\textsubscript{s}).  The difference between each of these colour indices for the target and the reference is calculated ($\Delta{}col$) and compared with the limit ($\Delta{}col_max$).  The ratio between these values is subtracted from one to get a normalised rating between 0 and 1 (note that as defined in Expression \ref{collim}, $\Delta{}col < \Delta{}col_max$, preventing negative ratings).  The ratings from each of the pairs of colour indices are multiplied together to give the final rating for a Candidate Reference Star.
 %\begin{equ}[!htb]
 %  \begin{equation}
 %  \begin{split}
@@ -347,12 +347,13 @@ For each star which passes these filters, a \textit{rating} is calculated.  The 
 
 \begin{equ}[!h]
 \begin{align*}
-C_{l}&= r-i &&& C_{s}&= g-r \\
-\Delta{}C_{l}&= C_{l,t} -  C_{l,r} &&& \Delta{}C_{s}&= C_{s,t} -  C_{s,r} \\
-R_{l}&= 1 - \left | \frac{\Delta{}C_{l}}{\Delta{}C_{max}}\right | &&& R_{s}&= 1 - \left | \frac{\Delta{}C_{s}}{\Delta{}C_{max}}\right | \\
-&& R&=R_{l}\times{}R_{s}  &&
+col_{l}&= r-i & col_{s}&= g-r \\
+\Delta{}col_{l}&= col_{l,t} -  col_{l,r} & \Delta{}col_{s}&= col_{s,t} -  col_{s,r} \\
+Rating_{l}&= 1 - \left | \frac{\Delta{}col_{l}}{\Delta{}col_{max}}\right | & Rating_{s}&= 1 - \left | \frac{\Delta{}col_{s}}{\Delta{}col_{max}}\right | \\
+\\
+Rating&=Rating_{l}\times{}Rating_{s}  &
 \end{align*}
-\caption{\label{rating_def}Definition of the scoring system as used in the generation of the Quasar Catalogue. \textit{g}, \textit{r} and \textit{i} are SDSS magnitudes.  \textit{C} refers to colour indices.  Subscript \textit{l} and \textit{s} refer to long- and short-wavelength colour indices respectively.  Subscript \textit{t} refers to the target, while subscript \textit{r} refers to a reference.  \textit{R} refers to a Rating.}
+\caption{\label{rating_def}Definition of the scoring system as used in the generation of the Quasar Catalogue. \textit{g}, \textit{r} and \textit{i} are SDSS magnitudes.  \textit{col} refers to colour indices.  Subscript \textit{l} and \textit{s} refer to long- and short-wavelength colour indices respectively.  Subscript \textit{t} refers to the target, while subscript \textit{r} refers to a reference. }
 \end{equ}
 
 \subsection{Identifying the Effective Locus for each Candidate Reference Star}
@@ -504,9 +505,9 @@ This is achieved as follows:
 
 \begin{equ}[!h]
 \begin{align*}
-S&=\sum_{ref}^{FoV}R
+Score&=\sum_{ref}^{FoV}Ratings
 \end{align*}
-\caption{\label{scoring_def}Definition of the scoring system. \textit{S} refers to the Score, which is calculated as the sum of all the Ratings \textit{R} for reference stars in the FoV.}
+\caption{\label{scoring_def}Definition of the scoring system.  Score is calculated as the sum of all the Ratings for reference stars in the FoV.}
 \end{equ}
 
 
@@ -741,17 +742,18 @@ ${i_t = 14.399}$.  Substituting these into Expression \ref{rating_def} gives the
 
 \begin{equ}[!h]
 \begin{align*}
-C_{l,r}&= r_r-i_r&= 15.771&-15.533&= 0.238 &\\
-C_{l,t}&= r_t-i_t&= 14.648&-14.399&= 0.249 &\\
-\Delta{}C_{l}&= C_{l,r} -C_{l,t}&= 0.249 &-  0.238&= 0.011  &\\
-R_{l}&= 1 - \left | \frac{\Delta{}C_{l}}{\Delta{}C_{max}}\right |&= 1 &- \left | \frac{0.011}{0.1}\right |&= 0.89 &\\
+&col_{l,r}&= r_r-i_r= 15.771-15.533&= 0.238 &\\
+&col_{l,t}&= r_t-i_t= 14.648-14.399&= 0.249 &\\
+&\Delta{}col_{l}&= col_{l,r} -col_{l,t}= 0.249 -  0.238&= 0.011  &\\
+&Rating_{l}&= 1 - \left | \frac{\Delta{}col_{l}}{\Delta{}col_{max}}\right |= 1 - \left | \frac{0.011}{0.1}\right |&= 0.89 &\\
 \\
-C_{s,r}&= g_r-r_r&= 16.498&-15.771&= 0.727 &\\
-C_{s,t}&= r_r-i_r&= 115.382&-14.648&= 0.734 &\\
-\Delta{}C_{s}&= C_{s,r} -C_{s,t}&= 0.727 &-  0.734&= -0.007 &\\
- R_{s}&= 1 - \left | \frac{\Delta{}C_{s}}{\Delta{}C_{max}}\right |&= 1 &- \left | \frac{0.007}{0.1}\right |&= 0.93 &\\
+&col_{s,r}&= g_r-r_r= 16.498-15.771&= 0.727 &\\
+&col_{s,t}&= r_r-i_r= 115.382-14.648&= 0.734 &\\
+&\Delta{}col_{s}&= col_{s,r} -col_{s,t}= 0.727 -  0.734&= -0.007 &\\
+&Rating_{s}&= 1 - \left | \frac{\Delta{}col_{s}}{\Delta{}col_{max}}\right |= 1 - \left | \frac{-0.007}{0.1}\right |&= 0.93 &\\
  \\
-R&= R_{l}\times{}R_{s}&= 0.89&\times{}0.93&= 0.83 &
+&Rating&= Rating_{l}\times{}Rating_{s} \\
+&&= 0.89\times{}0.93&= 0.83 &
 \end{align*}
 \caption{\label{rating_example}Definition of the rating of Star \#{}8}
 \end{equ}

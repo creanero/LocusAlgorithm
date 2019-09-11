@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  13 AUG 2019 19:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  11 SEP 2019 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Locus_Whole_aa_alt
+**Locus_Whole_aa_alt.tex
 (./Locus_Whole_aa_alt.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
@@ -1364,86 +1364,79 @@ Package pdftex.def Info: fig1.png  used on input line 174.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 201.
  [2 <./fig1.png>]
-Overfull \hbox (1.12645pt too wide) detected at line 354
-[]
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 <fig3b.png, id=29, 1894.07625pt x 1866.975pt>
 File: fig3b.png Graphic file (type png)
 <use fig3b.png>
-Package pdftex.def Info: fig3b.png  used on input line 369.
+Package pdftex.def Info: fig3b.png  used on input line 370.
 (pdftex.def)             Requested size: 246.06006pt x 242.51585pt.
-[3 <./fig3b.png>]
+ [3]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <fig4b.png, id=37, 1903.11pt x 1791.69376pt>
 File: fig4b.png Graphic file (type png)
 <use fig4b.png>
-Package pdftex.def Info: fig4b.png  used on input line 514.
+Package pdftex.def Info: fig4b.png  used on input line 515.
 (pdftex.def)             Requested size: 246.06006pt x 231.64343pt.
 <fig5b.png, id=38, 1894.07625pt x 1788.6825pt>
 File: fig5b.png Graphic file (type png)
 <use fig5b.png>
-Package pdftex.def Info: fig5b.png  used on input line 522.
+Package pdftex.def Info: fig5b.png  used on input line 523.
 (pdftex.def)             Requested size: 246.06006pt x 232.34584pt.
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 578--578
+[4 <./fig3b.png>]
+Underfull \vbox (badness 4819) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 579--579
 []\T1/lmr/m/n/10 (+20) Table 1: |SDSS \T1/lmr/m/it/10 (+20) ugriz \T1/lmr/m/n/1
 0 (+20) Mag-ni-tudes for
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 578--578
+Underfull \hbox (badness 4531) in paragraph at lines 579--579
 \T1/lmr/m/it/10 (+20) SDSS1237680117417115655\T1/lmr/m/n/10 (+20) , the tar-get
  used in the
  []
 
 [5 <./fig4b.png> <./fig5b.png>]
-Underfull \hbox (badness 2213) in paragraph at lines 661--664
+Underfull \hbox (badness 2213) in paragraph at lines 662--665
 []\T1/lmr/m/n/10 (+20) Colour: as shown in Ex-pres-sion 7[] the ref-er-ence
  []
 
 
-Underfull \hbox (badness 4792) in paragraph at lines 661--664
+Underfull \hbox (badness 4792) in paragraph at lines 662--665
 \T1/lmr/m/n/10 (+20) star must match the colour of the tar-get to
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 661--664
+Underfull \hbox (badness 3333) in paragraph at lines 662--665
 \T1/lmr/m/n/10 (+20) this case this means $[]$ and
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 722--726
+Underfull \hbox (badness 1895) in paragraph at lines 723--727
 []\T1/lmr/m/n/10 (+20) For ex-am-ple, the star \T1/lmr/m/it/10 (+20) SDSS123768
 0117417050120
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 798--799
+Underfull \hbox (badness 10000) in paragraph at lines 799--800
 []\T1/lmr/m/n/10 (+20) Repeating this cal-cu-la-tion for
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 798--799
+Underfull \hbox (badness 2707) in paragraph at lines 799--800
 \T1/lmr/m/it/10 (+20) SDSS1237680065348435996 \T1/lmr/m/n/10 (+20) (Star #6 fro
 m Ta-ble 4[])
  []
 
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 7116) has occurred while \output is active []
 
- [6]
-Underfull \hbox (badness 1043) in paragraph at lines 837--852
+Underfull \hbox (badness 1043) in paragraph at lines 838--853
 []\T1/lmr/m/n/10 (+20) From Ex-pres-sion 3[], the FoV cen-tred on the PoI
  []
-
-
-Underfull \vbox (badness 3260) has occurred while \output is active []
 
 <Locus_Whole_files/figure-latex/candidate_plot-1.pdf, id=51, 469.755pt x 867.24
 pt>
@@ -1451,84 +1444,83 @@ File: Locus_Whole_files/figure-latex/candidate_plot-1.pdf Graphic file (type pd
 f)
 <use Locus_Whole_files/figure-latex/candidate_plot-1.pdf>
 Package pdftex.def Info: Locus_Whole_files/figure-latex/candidate_plot-1.pdf  u
-sed on input line 856.
+sed on input line 857.
 (pdftex.def)             Requested size: 246.06006pt x 219.53038pt.
-<Locus_Whole_files/figure-latex/locus_plot-1.pdf, id=53, 469.755pt x 867.24pt>
+[7]
+<Locus_Whole_files/figure-latex/locus_plot-1.pdf, id=57, 469.755pt x 867.24pt>
 File: Locus_Whole_files/figure-latex/locus_plot-1.pdf Graphic file (type pdf)
 <use Locus_Whole_files/figure-latex/locus_plot-1.pdf>
 Package pdftex.def Info: Locus_Whole_files/figure-latex/locus_plot-1.pdf  used 
-on input line 864.
+on input line 865.
 (pdftex.def)             Requested size: 246.06006pt x 178.54541pt.
-
-Underfull \vbox (badness 1062) has occurred while \output is active []
-
- [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [8 <./Locus_Whole_files/figure-latex/candidate_plot-1.pdf> <./Locus_Whole_file
 s/figure-latex/locus_plot-1.pdf>]
-Underfull \hbox (badness 4416) in paragraph at lines 910--911
+Underfull \hbox (badness 4416) in paragraph at lines 911--912
 []\T1/lmr/bx/n/10 Identify the tar-get\T1/lmr/m/n/10 (+20) : The tar-get is fou
 nd at
  []
 
 
-Underfull \hbox (badness 5374) in paragraph at lines 914--915
+Underfull \hbox (badness 5374) in paragraph at lines 915--916
 []\T1/lmr/bx/n/10 Define a Can-di-date Zone\T1/lmr/m/n/10 (+20) : The CZ around
 
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 914--915
+Underfull \hbox (badness 1168) in paragraph at lines 915--916
 \T1/lmr/m/n/10 (+20) the tar-get is de-fined by ($[]$,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--917
+Underfull \hbox (badness 10000) in paragraph at lines 917--918
 []\T1/lmr/bx/n/10 Filter Can-di-date Ref-er-ences\T1/lmr/m/n/10 (+20) : A can-d
 i-date
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 916--917
+Underfull \hbox (badness 8038) in paragraph at lines 917--918
 \T1/lmr/m/n/10 (+20) ref-er-ence must meet the fol-low-ing fil-ter-ing cri-te-
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 916--917
+Underfull \hbox (badness 4378) in paragraph at lines 917--918
 \T1/lmr/m/n/10 (+20) ria ($[]$), ($[]$) and
  []
 
 [9] (./Locus_Whole_aa_alt.bbl) [10
 
-] (./Locus_Whole_aa_alt.aux) ) 
+] (./Locus_Whole_aa_alt.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 10635 strings out of 492982
- 155826 string characters out of 6134896
- 294106 words of memory out of 5000000
+ 10637 strings out of 492982
+ 155848 string characters out of 6134896
+ 292106 words of memory out of 5000000
  13724 multiletter control sequences out of 15000+600000
- 128029 words of font info for 197 fonts, out of 8000000 for 9000
+ 128112 words of font info for 198 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,47p,1708b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/
-usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmro9.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Locus_Whole_aa_alt.pdf (10 pages, 687369 bytes).
+ 41i,14n,47p,1712b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/
+texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmro9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmtt9.pfb>
+Output written on Locus_Whole_aa_alt.pdf (10 pages, 687658 bytes).
 PDF statistics:
  162 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams

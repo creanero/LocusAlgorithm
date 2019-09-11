@@ -1,0 +1,167 @@
+\relax 
+\citation{smith2008emccd}
+\citation{giltinan2011using,everett2001technique}
+\citation{smith2008emccd}
+\citation{burdanov2014astrokit}
+\citation{young1991precise,howell2006handbook}
+\citation{everett2001technique,howell2002some}
+\citation{giltinan2011using}
+\babel@aux{english}{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\newlabel{introduction}{{1}{1}}
+\citation{creaner2016thesis}
+\citation{creaner2016thesis}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Conceptual basis to The Locus Algorithm}{2}}
+\newlabel{conceptual-basis-to-the-locus-algorithm}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Diagrammatic representation of two stars with loci (red and blue perimeter lines), which intersect and produce two Points of Intersection (PoI) circled in yellow. Modified from \citet  {creaner2016thesis}\relax }}{2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{loci_concept}{{1}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Locus Algorithm Design}{2}}
+\newlabel{locus-algorithm-design}{{3}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Definition of Coordinate System and Locus}{2}}
+\newlabel{definition-of-coordinate-system-and-locus}{{3.1}{2}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {1}{\ignorespaces Right Ascension foreshortening with Declination\relax }}{2}}
+\newlabel{RAshort}{{1}{2}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {2}{\ignorespaces Definition of a corrected angular size along the RA direction (R$^\prime $)\relax }}{2}}
+\newlabel{Rprime}{{2}{2}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {3}{\ignorespaces Definition of a FoV of size R x S centred on a target at (\(RA_t\) , \(Dec_t\))\relax }}{2}}
+\newlabel{FoVDef}{{3}{2}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {4}{\ignorespaces Evaluation of the accuracy of the R$^\prime $ for areas away from the celestial pole.\relax }}{2}}
+\newlabel{polar}{{4}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Candidate Zone}{2}}
+\newlabel{candidate-zone}{{3.2}{2}}
+\citation{creaner2016thesis}
+\citation{creaner2016thesis}
+\@writefile{loequ}{\contentsline {equ}{\numberline {5}{\ignorespaces Definition of a Candidate Zone of size 2R x 2S centred on a target with coordinates (\(RA_t\), \(Dec_t\)), in which zone reference stars with coordinates (\(RA_r\), \(Dec_r\)) can be found.\relax }}{3}}
+\newlabel{CZdef}{{5}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Identification and Filtering of Reference Stars}{3}}
+\newlabel{identification-and-filtering-of-reference-stars}{{3.3}{3}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {6}{\ignorespaces Definition of the limits of mag difference between the target and references.\relax }}{3}}
+\newlabel{maglim}{{6}{3}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {7}{\ignorespaces Definition of the limits of colour difference between the target and references.\relax }}{3}}
+\newlabel{collim}{{7}{3}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {8}{\ignorespaces Definition of the scoring system as used in the generation of the Quasar Catalogue. \textit  {g}, \textit  {r} and \textit  {i} are SDSS magnitudes. \textit  {col} refers to colour indices. Subscript \textit  {l} and \textit  {s} refer to long- and short-wavelength colour indices respectively. Subscript \textit  {t} refers to the target, while subscript \textit  {r} refers to a reference. \relax }}{3}}
+\newlabel{rating_def}{{8}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Identifying the Effective Locus for each Candidate Reference Star}{3}}
+\newlabel{identifying-the-effective-locus-for-each-candidate-reference-star}{{3.4}{3}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {9}{\ignorespaces Definition of the corner point (\(RA_c\), \(Dec_c\)) of the effective locus for a FoV of size R x S for a candidate reference star at (\(RA_r\), \(Dec_r\)) and a target at (\(RA_t\), \(Dec_t\)) \relax }}{3}}
+\newlabel{CPDef}{{9}{3}}
+\citation{creaner2016thesis}
+\citation{creaner2016thesis}
+\citation{creaner2016thesis}
+\citation{creaner2016thesis}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Each effective locus is defined by assigning a pair of RA and Dec coordinates for a corner point and a pair of lines North or South and East or West from the corner point. In this diagram, each candidate reference star is assigned a colour, and the effective locus that corresponds to it is drawn in the same colour. Modified from \citet  {creaner2016thesis}\relax }}{4}}
+\newlabel{effective_locus}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Identifying and Scoring Points of Intersection}{4}}
+\newlabel{def_identify}{{3.5}{4}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {10}{\ignorespaces Definition the directions (\(DirRA\), \(DirDec\)) of the lines from the corner point of that define the effective locus for a FoV of size R x S for a candidate reference star at (\(RA_c\), \(Dec_c\)) and given a target at (\(RA_t\), \(Dec_t\)). In current implementations, these values are encoded as a binary switch, with 1 representing increasing (\(+ive\)) direction and 0 representing decreasing (\(-ive\)) direction.\relax }}{4}}
+\newlabel{DirDef}{{10}{4}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {11}{\ignorespaces Definition of a PoI (\(RA_p\), \(Dec_p\)) given several sample cases.\relax }}{4}}
+\newlabel{PoICheck}{{11}{4}}
+\citation{githubrepo}
+\@writefile{loequ}{\contentsline {equ}{\numberline {12}{\ignorespaces Definition of the scoring system. Score is calculated as the sum of all the Ratings for reference stars in the FoV.\relax }}{5}}
+\newlabel{scoring_def}{{12}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Points of Intersection (PoI), and their associated score. In this diagram each star has a \textit  {rating} of 1, hence the score associated with each PoI is equal to the number of reference stars within a FoV centred at that PoI. Modified from \citet  {creaner2016thesis}\relax }}{5}}
+\newlabel{PoIscores}{{3}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Example Implementation of the Locus Algorithm}{5}}
+\newlabel{example-implementation-of-the-locus-algorithm}{{4}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Locus Algorithm. Target: white star. Pointing \& FoV: blue. Reference stars and their loci: Fully in the FoV: greens. On the edge of the FoV: yellows. Outside FoV: reds. Modified from \citet  {creaner2016thesis}\relax }}{5}}
+\newlabel{final}{{4}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Target}{5}}
+\newlabel{target}{{4.1}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces SDSS \textit  {ugriz} Magnitudes for \textit  {SDSS1237680117417115655}, the target used in the sample implementation of the Locus Algorithm\relax }}{5}}
+\newlabel{table:target_mags}{{1}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Candidate Zone}{5}}
+\newlabel{candidate-zone-1}{{4.2}{5}}
+\citation{aguado2019fifteenth}
+\citation{rcurl}
+\citation{rcurl}
+\citation{knitr1,knitr2,knitr3}
+\citation{kableExtra}
+\citation{rcurl}
+\citation{knitr1,knitr2,knitr3}
+\citation{kableExtra}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Observational parameters for the example use of the Locus Algorithm\relax }}{6}}
+\newlabel{table:observational_parameters}{{2}{6}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {13}{\ignorespaces Definition of $R^\prime $ for the target.\relax }}{6}}
+\newlabel{Rprime_example}{{13}{6}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {14}{\ignorespaces Definition of the locus centred on the target.\relax }}{6}}
+\newlabel{locus_example}{{14}{6}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {15}{\ignorespaces Definition of the Candidate Zone (CZ) centred on the target.\relax }}{6}}
+\newlabel{CZ_example}{{15}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Identification and Filtering of Reference Stars}{6}}
+\newlabel{identification-and-filtering-of-reference-stars-1}{{4.3}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces A summary of the number of candidate reference stars remaining at each stage.\relax }}{6}}
+\newlabel{summary_of_references}{{3}{6}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {16}{\ignorespaces Definition of the rating of Star \#{}8\relax }}{6}}
+\newlabel{rating_example}{{16}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Identifying the Effective Locus for each Candidate Reference Star}{6}}
+\newlabel{example_loci}{{4.4}{6}}
+\citation{tidyverse}
+\citation{tidyverse}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Details of the candidate reference stars from SDSS. The seven stars highlighted in red are found in the final field of view. The target star itself is shown highlighted in green. Then numbers given in the first column ``ref'' are used to identify the candidate reference stars in the worked examples shown in Subsection \ref  {example_loci}. Data accessed using RCurl by \citet  {rcurl}, table generated with knitr by \citet  {knitr1,knitr2,knitr3} and kableExtra by \citet  {kableExtra}\relax }}{7}}
+\newlabel{candidate_references}{{4}{7}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {17}{\ignorespaces Definition of the corner-point of the effective locus for Reference Star 8\relax }}{7}}
+\newlabel{CP_example}{{17}{7}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {18}{\ignorespaces Definition of the directions of the lines drawn from the corner-point of the effective locus for Star \#{}8\relax }}{7}}
+\newlabel{Dir_example}{{18}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces A summary of the defining parameters of the effective loci for example Stars \#{}6 and \#{}8\relax }}{7}}
+\newlabel{example_targets}{{5}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Identifying and Scoring Points of Intersection}{7}}
+\newlabel{PoI_example}{{4.5}{7}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {19}{\ignorespaces Definition of the PoI between the effective Loci of Stars \#{}6 and \#{}8\relax }}{7}}
+\newlabel{PoI_example_expr}{{19}{7}}
+\citation{tidyverse}
+\citation{tidyverse}
+\citation{githubrepo}
+\citation{quasarpaper}
+\citation{githubrepo}
+\@writefile{loequ}{\contentsline {equ}{\numberline {20}{\ignorespaces Definition of the FoV centred on the PoI between the effective Loci of Stars \#{}6 and \#{}8\relax }}{8}}
+\newlabel{FoV_example}{{20}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A plot of the Candidate Zone (green box), the target (green dot), the candidate reference stars (blue dots), the effective loci for each candidate reference star (blue lines) the Points of Intersection between those loci (black dots). Highlighted in red are the candidate reference stars, loci and PoI used to identify the final pointing. Plot generated using tidyverse by \citet  {tidyverse}\relax }}{8}}
+\newlabel{candidate_plot}{{5}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Applications of the Algorithm}{8}}
+\newlabel{Applications}{{5}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces A plot illustrating the final pointing. On this plot, the target is shown in green, the pointing and the resulting final Field of View are shown in red, and the final reference stars are shown in shades of blue that vary from light to dark based on the rating of the reference star. Plot generated using tidyverse by \citet  {tidyverse}\relax }}{8}}
+\newlabel{locus_plot}{{6}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Targeted Use}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Catalogue Generation}{8}}
+\citation{githubrepo}
+\citation{softwarepaper}
+\citation{gridsystempaper}
+\citation{quasarpaper,ZenodoQuasarCatalogue}
+\citation{exopaper,ZenodoXOPCatalogue}
+\citation{rcurl}
+\citation{tidyverse}
+\citation{knitr1,knitr2,knitr3}
+\citation{kableExtra}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{9}}
+\newlabel{Conclusions}{{6}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Summary of Algorithm}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Summary of Demonstration}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Further developments}{9}}
+\bibstyle{aa}
+\bibdata{Locus_Whole_bibtex}
+\bibcite{aguado2019fifteenth}{{1}{2019}{{Aguado {et~al.}}}{{Aguado, Ahumada, Almeida, Anderson, Andrews, Anguiano, Ort{\'\i }z, Arag{\'o}n-Salamanca, Argudo-Fern{\'a}ndez, Aubert, {et~al.}}}}
+\bibcite{burdanov2014astrokit}{{2}{2014}{{Burdanov {et~al.}}}{{Burdanov, Krushinsky, \& Popov}}}
+\bibcite{creaner2016thesis}{{3}{2016}{{Creaner}}{{}}}
+\bibcite{githubrepo}{{4}{2007}{{Creaner {et~al.}}}{{Creaner, Hickey, \& Nolan}}}
+\bibcite{softwarepaper}{{5}{2019{a}}{{Creaner {et~al.}}}{{Creaner, Hickey, \& Nolan}}}
+\bibcite{gridsystempaper}{{6}{2019{b}}{{Creaner {et~al.}}}{{Creaner, Hickey, \& Nolan}}}
+\bibcite{quasarpaper}{{7}{2019{c}}{{Creaner {et~al.}}}{{Creaner, Hickey, Nolan, \& Smith}}}
+\bibcite{exopaper}{{8}{2019{d}}{{Creaner {et~al.}}}{{Creaner, Hickey, Nolan, \& Smith}}}
+\bibcite{ZenodoXOPCatalogue}{{9}{2019{e}}{{Creaner {et~al.}}}{{Creaner, Nolan, \& Hickey}}}
+\bibcite{ZenodoQuasarCatalogue}{{10}{2019{f}}{{Creaner {et~al.}}}{{Creaner, Nolan, \& Hickey}}}
+\bibcite{everett2001technique}{{11}{2001}{{Everett \& Howell}}{{}}}
+\bibcite{giltinan2011using}{{12}{2011}{{Giltinan {et~al.}}}{{Giltinan, Loughnan, Collins, \& Smith}}}
+\bibcite{howell2006handbook}{{13}{2006}{{Howell}}{{}}}
+\bibcite{howell2002some}{{14}{2002}{{Howell \& Everett}}{{}}}
+\bibcite{rcurl}{{15}{2019}{{Lang \& the CRAN~team}}{{}}}
+\bibcite{smith2008emccd}{{16}{2008}{{Smith {et~al.}}}{{Smith, Giltinan, O\IeC {\textquoteright }Connor, O\IeC {\textquoteright }Driscoll, Collins, Loughnan, \& Papageorgiou}}}
+\bibcite{tidyverse}{{17}{2017}{{Wickham}}{{}}}
+\bibcite{knitr3}{{18}{2014}{{Xie}}{{}}}
+\bibcite{knitr2}{{19}{2015}{{Xie}}{{}}}
+\bibcite{knitr1}{{20}{2019}{{Xie}}{{}}}
+\bibcite{young1991precise}{{21}{1991}{{Young {et~al.}}}{{Young, Genet, Boyd, Borucki, Lockwood, Henry, Hall, Smith, Baliumas, Donahue, {et~al.}}}}
+\bibcite{kableExtra}{{22}{2019}{{Zhu}}{{}}}
+\newlabel{LastPage}{{10}{10}{}{}{}}

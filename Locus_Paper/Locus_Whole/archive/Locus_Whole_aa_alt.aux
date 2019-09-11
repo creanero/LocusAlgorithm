@@ -40,18 +40,18 @@
 \newlabel{maglim}{{6}{3}}
 \@writefile{loequ}{\contentsline {equ}{\numberline {7}{\ignorespaces Definition of the limits of colour difference between the target and references.\relax }}{3}}
 \newlabel{collim}{{7}{3}}
-\@writefile{loequ}{\contentsline {equ}{\numberline {8}{\ignorespaces Definition of the scoring system as used in the generation of the Quasar Catalogue. \textit  {g}, \textit  {r} and \textit  {i} are SDSS magnitudes. \textit  {C} refers to colour indices. Subscript \textit  {l} and \textit  {s} refer to long- and short-wavelength colour indices respectively. Subscript \textit  {t} refers to the target, while subscript \textit  {r} refers to a reference. \textit  {R} refers to a Rating.\relax }}{3}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {8}{\ignorespaces Definition of the scoring system as used in the generation of the Quasar Catalogue. \textit  {g}, \textit  {r} and \textit  {i} are SDSS magnitudes. \textit  {C} refers to colour indices. Subscript \textit  {l} and \textit  {s} refer to long- and short-wavelength colour indices respectively. Subscript \textit  {t} refers to the target, while subscript \textit  {r} refers to a reference. \relax }}{3}}
 \newlabel{rating_def}{{8}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Each effective locus is defined by assigning a pair of RA and Dec coordinates for a corner point and a pair of lines North or South and East or West from the corner point. In this diagram, each candidate reference star is assigned a colour, and the effective locus that corresponds to it is drawn in the same colour. Modified from \citet  {creaner2016thesis}\relax }}{3}}
-\newlabel{effective_locus}{{2}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Identifying the Effective Locus for each Candidate Reference Star}{3}}
 \newlabel{identifying-the-effective-locus-for-each-candidate-reference-star}{{3.4}{3}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {9}{\ignorespaces Definition of the corner point (\(RA_c\), \(Dec_c\)) of the effective locus for a FoV of size R x S for a candidate reference star at (\(RA_r\), \(Dec_r\)) and a target at (\(RA_t\), \(Dec_t\)) \relax }}{3}}
+\newlabel{CPDef}{{9}{3}}
 \citation{creaner2016thesis}
 \citation{creaner2016thesis}
 \citation{creaner2016thesis}
 \citation{creaner2016thesis}
-\@writefile{loequ}{\contentsline {equ}{\numberline {9}{\ignorespaces Definition of the corner point (\(RA_c\), \(Dec_c\)) of the effective locus for a FoV of size R x S for a candidate reference star at (\(RA_r\), \(Dec_r\)) and a target at (\(RA_t\), \(Dec_t\)) \relax }}{4}}
-\newlabel{CPDef}{{9}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Each effective locus is defined by assigning a pair of RA and Dec coordinates for a corner point and a pair of lines North or South and East or West from the corner point. In this diagram, each candidate reference star is assigned a colour, and the effective locus that corresponds to it is drawn in the same colour. Modified from \citet  {creaner2016thesis}\relax }}{4}}
+\newlabel{effective_locus}{{2}{4}}
 \@writefile{loequ}{\contentsline {equ}{\numberline {10}{\ignorespaces Definition the directions (\(DirRA\), \(DirDec\)) of the lines from the corner point of that define the effective locus for a FoV of size R x S for a candidate reference star at (\(RA_c\), \(Dec_c\)) and given a target at (\(RA_t\), \(Dec_t\)). In current implementations, these values are encoded as a binary switch, with 1 representing increasing (\(+ive\)) direction and 0 representing decreasing (\(-ive\)) direction.\relax }}{4}}
 \newlabel{DirDef}{{10}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Identifying and Scoring Points of Intersection}{4}}
@@ -59,22 +59,20 @@
 \@writefile{loequ}{\contentsline {equ}{\numberline {11}{\ignorespaces Definition of a PoI (\(RA_p\), \(Dec_p\)) given several sample cases.\relax }}{4}}
 \newlabel{PoICheck}{{11}{4}}
 \citation{githubrepo}
-\@writefile{loequ}{\contentsline {equ}{\numberline {12}{\ignorespaces Definition of the scoring system. \textit  {S} refers to the Score, which is calculated as the sum of all the Ratings \textit  {R} for reference stars in the FoV.\relax }}{5}}
+\@writefile{loequ}{\contentsline {equ}{\numberline {12}{\ignorespaces Definition of the scoring system. Score, is calculated as the sum of all the Ratings for reference stars in the FoV.\relax }}{5}}
 \newlabel{scoring_def}{{12}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Points of Intersection (PoI), and their associated score. In this diagram each star has a \textit  {rating} of 1, hence the score associated with each PoI is equal to the number of reference stars within a FoV centred at that PoI. Modified from \citet  {creaner2016thesis}\relax }}{5}}
 \newlabel{PoIscores}{{3}{5}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Example Implementation of the Locus Algorithm}{5}}
 \newlabel{example-implementation-of-the-locus-algorithm}{{4}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Target}{5}}
-\newlabel{target}{{4.1}{5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Locus Algorithm. Target: white star. Pointing \& FoV: blue. Reference stars and their loci: Fully in the FoV: greens. On the edge of the FoV: yellows. Outside FoV: reds. Modified from \citet  {creaner2016thesis}\relax }}{5}}
 \newlabel{final}{{4}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Target}{5}}
+\newlabel{target}{{4.1}{5}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces SDSS \textit  {ugriz} Magnitudes for \textit  {SDSS1237680117417115655}, the target used in the sample implementation of the Locus Algorithm\relax }}{5}}
 \newlabel{table:target_mags}{{1}{5}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Observational parameters for the example use of the Locus Algorithm\relax }}{5}}
 \newlabel{table:observational_parameters}{{2}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Candidate Zone}{5}}
-\newlabel{candidate-zone-1}{{4.2}{5}}
 \citation{aguado2019fifteenth}
 \citation{rcurl}
 \citation{rcurl}
@@ -83,6 +81,8 @@
 \citation{rcurl}
 \citation{knitr1,knitr2,knitr3}
 \citation{kableExtra}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Candidate Zone}{6}}
+\newlabel{candidate-zone-1}{{4.2}{6}}
 \@writefile{loequ}{\contentsline {equ}{\numberline {13}{\ignorespaces Definition of $R^\prime $ for the target.\relax }}{6}}
 \newlabel{Rprime_example}{{13}{6}}
 \@writefile{loequ}{\contentsline {equ}{\numberline {14}{\ignorespaces Definition of the locus centred on the target.\relax }}{6}}
@@ -99,20 +99,20 @@
 \newlabel{example_loci}{{4.4}{6}}
 \citation{tidyverse}
 \citation{tidyverse}
-\citation{tidyverse}
-\citation{tidyverse}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Details of the candidate reference stars from SDSS. The seven stars highlighted in red are found in the final field of view. The target star itself is shown highlighted in green. Then numbers given in the first column ``ref'' are used to identify the candidate reference stars in the worked examples shown in Subsection \ref  {example_loci}. Data accessed using RCurl by \citet  {rcurl}, table generated with knitr by \citet  {knitr1,knitr2,knitr3} and kableExtra by \citet  {kableExtra}\relax }}{7}}
 \newlabel{candidate_references}{{4}{7}}
 \@writefile{loequ}{\contentsline {equ}{\numberline {17}{\ignorespaces Definition of the corner-point of the effective locus for Reference Star 8\relax }}{7}}
 \newlabel{CP_example}{{17}{7}}
 \@writefile{loequ}{\contentsline {equ}{\numberline {18}{\ignorespaces Definition of the directions of the lines drawn from the corner-point of the effective locus for Star \#{}8\relax }}{7}}
 \newlabel{Dir_example}{{18}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Identifying and Scoring Points of Intersection}{7}}
-\newlabel{PoI_example}{{4.5}{7}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces A summary of the defining parameters of the effective loci for example Stars \#{}6 and \#{}8\relax }}{7}}
 \newlabel{example_targets}{{5}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Identifying and Scoring Points of Intersection}{7}}
+\newlabel{PoI_example}{{4.5}{7}}
 \@writefile{loequ}{\contentsline {equ}{\numberline {19}{\ignorespaces Definition of the PoI between the effective Loci of Stars \#{}6 and \#{}8\relax }}{7}}
 \newlabel{PoI_example_expr}{{19}{7}}
+\citation{tidyverse}
+\citation{tidyverse}
 \citation{githubrepo}
 \citation{quasarpaper}
 \citation{githubrepo}

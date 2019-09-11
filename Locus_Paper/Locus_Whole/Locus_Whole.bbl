@@ -1,0 +1,104 @@
+\begin{thebibliography}{22}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Aguado {et~al.}(2019)Aguado, Ahumada, Almeida, Anderson, Andrews,
+  Anguiano, Ort{\'\i}z, Arag{\'o}n-Salamanca, Argudo-Fern{\'a}ndez, Aubert,
+  {et~al.}}]{aguado2019fifteenth}
+Aguado, D.~S., Ahumada, R., Almeida, A., {et~al.} 2019, The Astrophysical
+  Journal Supplement Series, 240, 23
+
+\bibitem[{Burdanov {et~al.}(2014)Burdanov, Krushinsky, \&
+  Popov}]{burdanov2014astrokit}
+Burdanov, A.~Y., Krushinsky, V.~V., \& Popov, A.~A. 2014, Astrophysical
+  Bulletin, 69, 368
+
+\bibitem[{Creaner(2016)}]{creaner2016thesis}
+Creaner, O. 2016, PhD thesis, Institute of Technology, Tallaght, Dublin
+
+\bibitem[{Creaner {et~al.}(2007)Creaner, Hickey, \& Nolan}]{githubrepo}
+Creaner, O., Hickey, E., \& Nolan, K. 2007, Locus Algorithm Github Repo,
+  \url{www.github.com/creaneroDIAS/locus}
+
+\bibitem[{Creaner {et~al.}(2019{\natexlab{a}})Creaner, Hickey, \&
+  Nolan}]{softwarepaper}
+Creaner, O., Hickey, E., \& Nolan, K. 2019{\natexlab{a}}, Astronomy and
+  Computing, in Press
+
+\bibitem[{Creaner {et~al.}(2019{\natexlab{b}})Creaner, Hickey, \&
+  Nolan}]{gridsystempaper}
+Creaner, O., Hickey, E., \& Nolan, K. 2019{\natexlab{b}}, Astronomy and
+  Computing, in Press
+
+\bibitem[{Creaner {et~al.}(2019{\natexlab{c}})Creaner, Hickey, Nolan, \&
+  Smith}]{quasarpaper}
+Creaner, O., Hickey, E., Nolan, K., \& Smith, N. 2019{\natexlab{c}}, Astronomy
+  and Computing, in Press
+
+\bibitem[{Creaner {et~al.}(2019{\natexlab{d}})Creaner, Hickey, Nolan, \&
+  Smith}]{exopaper}
+Creaner, O., Hickey, E., Nolan, K., \& Smith, N. 2019{\natexlab{d}}, Astronomy
+  and Computing, in Press
+
+\bibitem[{Creaner {et~al.}(2019{\natexlab{e}})Creaner, Nolan, \&
+  Hickey}]{ZenodoXOPCatalogue}
+Creaner, O., Nolan, K., \& Hickey, E. 2019{\natexlab{e}}, Placeholder Exoplanet
+  Catalogue Zenodo Link, \url{placeholder}
+
+\bibitem[{Creaner {et~al.}(2019{\natexlab{f}})Creaner, Nolan, \&
+  Hickey}]{ZenodoQuasarCatalogue}
+Creaner, O., Nolan, K., \& Hickey, E. 2019{\natexlab{f}}, Placeholder Quasar
+  Catalogue Zenodo Link, \url{placeholder}
+
+\bibitem[{Everett \& Howell(2001)}]{everett2001technique}
+Everett, M.~E. \& Howell, S.~B. 2001, Publications of the Astronomical Society
+  of the Pacific, 113, 1428
+
+\bibitem[{Giltinan {et~al.}(2011)Giltinan, Loughnan, Collins, \&
+  Smith}]{giltinan2011using}
+Giltinan, A., Loughnan, D., Collins, A., \& Smith, N. 2011, Journal of Physics:
+  Conference Series, 307, 012010
+
+\bibitem[{Howell(2006)}]{howell2006handbook}
+Howell, S.~B. 2006, Handbook of CCD astronomy, Vol.~5 (Cambridge University
+  Press)
+
+\bibitem[{Howell \& Everett(2002)}]{howell2002some}
+Howell, S.~B. \& Everett, M.~E. 2002, in Third Workshop on Improvements to
+  Photometry, edited by W. Borucki (NASA, 1999)
+
+\bibitem[{Lang \& the CRAN~team(2019)}]{rcurl}
+Lang, D.~T. \& the CRAN~team. 2019, RCurl: General Network (HTTP/FTP/...)
+  Client Interface for R, r package version 1.95-4.12
+
+\bibitem[{Smith {et~al.}(2008)Smith, Giltinan, O’Connor, O’Driscoll,
+  Collins, Loughnan, \& Papageorgiou}]{smith2008emccd}
+Smith, N., Giltinan, A., O’Connor, A., {et~al.} 2008, in High Time Resolution
+  Astrophysics (Springer), 257--279
+
+\bibitem[{Wickham(2017)}]{tidyverse}
+Wickham, H. 2017, tidyverse: Easily Install and Load the 'Tidyverse', r package
+  version 1.2.1
+
+\bibitem[{Xie(2014)}]{knitr3}
+Xie, Y. 2014, in Implementing Reproducible Computational Research, ed.
+  V.~Stodden, F.~Leisch, \& R.~D. Peng (Chapman and Hall/CRC), 3--32, iSBN
+  978-1466561595
+
+\bibitem[{Xie(2015)}]{knitr2}
+Xie, Y. 2015, Dynamic Documents with {R} and knitr, 2nd edn. (Boca Raton,
+  Florida: Chapman and Hall/CRC), iSBN 978-1498716963
+
+\bibitem[{Xie(2019)}]{knitr1}
+Xie, Y. 2019, knitr: A General-Purpose Package for Dynamic Report Generation in
+  R, r package version 1.23
+
+\bibitem[{Young {et~al.}(1991)Young, Genet, Boyd, Borucki, Lockwood, Henry,
+  Hall, Smith, Baliumas, Donahue, {et~al.}}]{young1991precise}
+Young, A.~T., Genet, R.~M., Boyd, L.~J., {et~al.} 1991, Publications of the
+  Astronomical Society of the Pacific, 103, 221
+
+\bibitem[{Zhu(2019)}]{kableExtra}
+Zhu, H. 2019, kableExtra: Construct Complex Table with 'kable' and Pipe Syntax,
+  r package version 1.1.0
+
+\end{thebibliography}
