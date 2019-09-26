@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  26 SEP 2019 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.4.16)  26 SEP 2019 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Locus_Whole
-(./Locus_Whole.tex
+**Locus_Whole_ref
+(./Locus_Whole_ref.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./aa.cls
@@ -380,6 +380,33 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2017/04/22 v1.2b non floating margin notes for LaTeX
+\c@mn@abspage=\count91
+)
+\c@lenote=\count92
+
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -397,9 +424,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count91
-\Gm@cntv=\count92
-\c@Gm@tempcnt=\count93
+\Gm@cnth=\count93
+\Gm@cntv=\count94
+\c@Gm@tempcnt=\count95
 \Gm@bindingoffset=\dimen106
 \Gm@wd@mp=\dimen107
 \Gm@odd@mp=\dimen108
@@ -437,7 +464,7 @@ Package: cuted 2012/10/04 v1.5 Mixing onecolumn and twocolumn modes
 \lastbox@a=\box28
 \stripsep=\skip60
 \@viper=\box29
-\viper@penalty=\count94
+\viper@penalty=\count96
 \hold@viper=\box30
 \ht@viper=\dimen114
 )
@@ -461,13 +488,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count95
+\inf@bad=\count97
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count96
-\leftroot@=\count97
+\uproot@=\count98
+\leftroot@=\count99
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count98
-\DOTSCASE@=\count99
+\classnum@=\count100
+\DOTSCASE@=\count101
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -476,15 +503,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen117
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count100
-\c@MaxMatrixCols=\count101
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
 \dotsspace@=\muskip10
-\c@parentequation=\count102
-\dspbrk@lvl=\count103
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
 \tag@help=\toks20
-\row@=\count104
-\column@=\count105
-\maxfields@=\count106
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
 \andhelp@=\toks21
 \eqnshift@=\dimen118
 \alignsep@=\dimen119
@@ -523,16 +550,16 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip65
 \LTpre=\skip66
 \LTpost=\skip67
-\LTchunksize=\count107
+\LTchunksize=\count109
 \LTcapwidth=\dimen124
 \LT@head=\box33
 \LT@firsthead=\box34
 \LT@foot=\box35
 \LT@lastfoot=\box36
-\LT@cols=\count108
-\LT@rows=\count109
-\c@LT@tables=\count110
-\c@LT@chunks=\count111
+\LT@cols=\count110
+\LT@rows=\count111
+\c@LT@tables=\count112
+\c@LT@chunks=\count113
 \LT@p@ftn=\toks25
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
@@ -540,7 +567,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip68
 \bibsep=\skip69
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count112
+\c@NAT@ctr=\count114
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -556,11 +583,11 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count113
+\babel@savecnt=\count115
 \U@D=\dimen125
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count114
+\bbl@dirlevel=\count116
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -582,29 +609,26 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
+)
 \Gin@req@height=\dimen126
 \Gin@req@width=\dimen127
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count115
+\c@r@tfl@t=\count117
 \rotFPtop=\skip70
 \rotFPbot=\skip71
 \rot@float@box=\box37
 \rot@mess@toks=\toks26
 )
-\aa@cnta=\count116
-\aa@cntb=\count117
-\aa@nbwords=\count118
-\aa@nbauthors=\count119
-\aa@nbinstitutes=\count120
-\c@aa@institutecnt=\count121
-\aa@savecounter=\count122
+\aa@cnta=\count118
+\aa@cntb=\count119
+\aa@nbwords=\count120
+\aa@nbauthors=\count121
+\aa@nbinstitutes=\count122
+\c@aa@institutecnt=\count123
+\aa@savecounter=\count124
 \aa@dima=\skip72
 \aa@dimb=\skip73
 \aa@dimc=\skip74
@@ -658,10 +682,18 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \yearCop=\toks28
 \aa@stripbox=\box38
 \aa@outputbox=\box39
-\c@AAproof=\count123
-\c@AAtheorem=\count124
-)
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 705.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 705.
+
+\c@AAproof=\count125
+\c@AAtheorem=\count126
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen128
 \lightrulewidth=\dimen129
@@ -673,12 +705,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen135
 \cmidrulekern=\dimen136
 \defaultaddspace=\dimen137
-\@cmidla=\count125
-\@cmidlb=\count126
+\@cmidla=\count127
+\@cmidlb=\count128
 \@aboverulesep=\dimen138
 \@belowrulesep=\dimen139
-\@thisruleclass=\count127
-\@lastruleclass=\count128
+\@thisruleclass=\count129
+\@lastruleclass=\count130
 \@thisrulewidth=\dimen140
 )
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/txfonts.sty
@@ -985,11 +1017,11 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks29
-\MT@count=\count129
+\MT@count=\count131
 LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen141
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count130
+\MT@listname@count=\count132
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
@@ -1003,14 +1035,6 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-
 (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
@@ -1024,17 +1048,6 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 )
 \everycr=\toks31
 \minrowclearance=\skip124
-)
-\rownum=\count131
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
@@ -1064,7 +1077,7 @@ Package caption Info: \@makecaption = \long macro:#1#2->\aa@captionfont \ifx \@
 captype \aa@figtype \par \vskip \VSpaceBeforeFigCaption \aa@@makecaption {#1}\a
 a@capstrut #2\par \else {\aa@headcaptionfont #1\aa@floatcounterend }\aa@capstru
 t #2\par \vskip \VSpaceAfterTabCaption \fi .
-\c@ContinuedFloat=\count132
+\c@ContinuedFloat=\count133
 Package caption Info: longtable package is loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
@@ -1075,17 +1088,18 @@ Package caption Info: rotating package is loaded.
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
 Package newfloat Info: New float `equ' with options `' on input line 89.
-\c@equ=\count133
-\newfloat@ftype=\count134
+\c@equ=\count134
+\newfloat@ftype=\count135
 Package newfloat Info: float type `equ'=8 on input line 89.
 
-(./Locus_Whole.aux)
-\openout1 = `Locus_Whole.aux'.
+(./Locus_Whole_ref.aux)
+\openout1 = `Locus_Whole_ref.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 95.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 95.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 95.
@@ -1096,7 +1110,8 @@ LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 95.
 LaTeX Font Info:    Try loading font information for OMS+txsy on input line 95.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 95.
@@ -1127,51 +1142,18 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 95.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(36.98859pt, 523.5307pt, 36.98859pt)
-* v-part:(T,H,B)=(56.01874pt, 705.0pt, 84.0281pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=523.5307pt
-* \textheight=705.0pt
-* \oddsidemargin=-35.2814pt
-* \evensidemargin=-35.2814pt
-* \topmargin=-40.25125pt
-* \headheight=12.0pt
-* \headsep=12.0pt
-* \topskip=10.0pt
-* \footskip=20.0pt
-* \marginparwidth=0.0pt
-* \marginparsep=0.0pt
-* \columnsep=11.38109pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumntrue
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
+\scratchcounter=\count136
 \scratchdimen=\dimen151
 \scratchbox=\box40
-\nofMPsegments=\count136
-\nofMParguments=\count137
+\nofMPsegments=\count137
+\nofMParguments=\count138
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count138
+\MPscratchCnt=\count139
 \MPscratchDim=\dimen152
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1220,6 +1202,43 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package marginnote Info: \pdfoutput not 0 or unimportant and
+(marginnote)             \pdflastxpos or \lastxpos available.
+(marginnote)             Extended position detection mode activated.
+
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 392.64803pt, 162.18073pt)
+* v-part:(T,H,B)=(56.01874pt, 705.0pt, 84.0281pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=392.64803pt
+* \textheight=705.0pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-40.25125pt
+* \headheight=12.0pt
+* \headsep=12.0pt
+* \topskip=10.0pt
+* \footskip=20.0pt
+* \marginparwidth=142.26378pt
+* \marginparsep=14.22636pt
+* \columnsep=11.38109pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 LaTeX Info: Redefining \microtypecontext on input line 95.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1230,7 +1249,6 @@ Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -1348,173 +1366,132 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 137.
 
-Underfull \vbox (badness 2469) has occurred while \output is active []
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 137.
 
+[1
 
-]
-<fig1.png, id=16, 759.58781pt x 482.55281pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<fig1.png, id=19, 759.58781pt x 482.55281pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
 Package pdftex.def Info: fig1.png  used on input line 175.
-(pdftex.def)             Requested size: 246.06006pt x 156.31238pt.
+(pdftex.def)             Requested size: 184.54504pt x 117.23611pt.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 202.
- [2 <./fig1.png>]
-<fig3b.png, id=29, 1894.07625pt x 1866.975pt>
+ [3 <./fig1.png>]
+Underfull \vbox (badness 1924) has occurred while \output is active []
+
+ [4]
+[5]
+<fig3b.png, id=38, 1894.07625pt x 1866.975pt>
 File: fig3b.png Graphic file (type png)
 <use fig3b.png>
 Package pdftex.def Info: fig3b.png  used on input line 371.
-(pdftex.def)             Requested size: 246.06006pt x 242.51585pt.
- [3]
+(pdftex.def)             Requested size: 184.54504pt x 181.89401pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<fig4b.png, id=37, 1903.11pt x 1791.69376pt>
+ [6]
+[7 <./fig3b.png>] [8]
+<fig4b.png, id=53, 1903.11pt x 1791.69376pt>
 File: fig4b.png Graphic file (type png)
 <use fig4b.png>
 Package pdftex.def Info: fig4b.png  used on input line 516.
-(pdftex.def)             Requested size: 246.06006pt x 231.64343pt.
-<fig5b.png, id=38, 1894.07625pt x 1788.6825pt>
+(pdftex.def)             Requested size: 184.54504pt x 173.73941pt.
+<fig5b.png, id=54, 1894.07625pt x 1788.6825pt>
 File: fig5b.png Graphic file (type png)
 <use fig5b.png>
 Package pdftex.def Info: fig5b.png  used on input line 524.
-(pdftex.def)             Requested size: 246.06006pt x 232.34584pt.
-[4 <./fig3b.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 580--580
-[]\T1/lmr/m/n/10 (+20) Table 1: |SDSS \T1/lmr/m/it/10 (+20) ugriz \T1/lmr/m/n/1
-0 (+20) Mag-ni-tudes for
+(pdftex.def)             Requested size: 184.54504pt x 174.26619pt.
+ [9 <./fig4b.png> <./fig5b.png>]
+Overfull \hbox (47.55305pt too wide) in paragraph at lines 563--566
+\T1/lmr/m/n/10 (-20) The star \T1/lmr/m/it/10 (-20) SDSS1237680117417115655\T1/
+lmr/m/n/10 (-20) , hence-forth called the tar-get, ($[] []$)
  []
 
 
-Underfull \hbox (badness 4531) in paragraph at lines 580--580
-\T1/lmr/m/it/10 (+20) SDSS1237680117417115655\T1/lmr/m/n/10 (+20) , the tar-get
- used in the
- []
+Underfull \vbox (badness 4454) has occurred while \output is active []
 
-[5 <./fig4b.png> <./fig5b.png>]
-Underfull \hbox (badness 2213) in paragraph at lines 663--666
-[]\T1/lmr/m/n/10 (+20) Colour: as shown in Ex-pres-sion 7[] the ref-er-ence
- []
-
-
-Underfull \hbox (badness 4792) in paragraph at lines 663--666
-\T1/lmr/m/n/10 (+20) star must match the colour of the tar-get to
+ [10]
+[11]
+Overfull \hbox (92.9349pt too wide) in paragraph at lines 697--719
+ [][] 
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 663--666
-\T1/lmr/m/n/10 (+20) this case this means $[]$ and
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[12]
+Underfull \vbox (badness 6063) has occurred while \output is active []
 
-Underfull \hbox (badness 1895) in paragraph at lines 724--728
-[]\T1/lmr/m/n/10 (+20) For ex-am-ple, the star \T1/lmr/m/it/10 (+20) SDSS123768
-0117417050120
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 801--802
-[]\T1/lmr/m/n/10 (+20) Repeating this cal-cu-la-tion for
- []
-
-
-Underfull \hbox (badness 2707) in paragraph at lines 801--802
-\T1/lmr/m/it/10 (+20) SDSS1237680065348435996 \T1/lmr/m/n/10 (+20) (Star #6 fro
-m Ta-ble 4[])
- []
-
-
-Underfull \hbox (badness 1043) in paragraph at lines 840--855
-[]\T1/lmr/m/n/10 (+20) From Ex-pres-sion 3[], the FoV cen-tred on the PoI
- []
-
-<Locus_Whole_files/figure-latex/candidate_plot-1.pdf, id=51, 469.755pt x 867.24
+ [13]
+<Locus_Whole_files/figure-latex/candidate_plot-1.pdf, id=73, 469.755pt x 867.24
 pt>
 File: Locus_Whole_files/figure-latex/candidate_plot-1.pdf Graphic file (type pd
 f)
 <use Locus_Whole_files/figure-latex/candidate_plot-1.pdf>
 Package pdftex.def Info: Locus_Whole_files/figure-latex/candidate_plot-1.pdf  u
 sed on input line 859.
-(pdftex.def)             Requested size: 246.06006pt x 219.53038pt.
-[7]
-<Locus_Whole_files/figure-latex/locus_plot-1.pdf, id=57, 469.755pt x 867.24pt>
+(pdftex.def)             Requested size: 184.54504pt x 164.64778pt.
+
+Underfull \vbox (badness 2221) has occurred while \output is active []
+
+ [14]
+<Locus_Whole_files/figure-latex/locus_plot-1.pdf, id=78, 469.755pt x 867.24pt>
 File: Locus_Whole_files/figure-latex/locus_plot-1.pdf Graphic file (type pdf)
 <use Locus_Whole_files/figure-latex/locus_plot-1.pdf>
 Package pdftex.def Info: Locus_Whole_files/figure-latex/locus_plot-1.pdf  used 
 on input line 867.
-(pdftex.def)             Requested size: 246.06006pt x 178.54541pt.
+(pdftex.def)             Requested size: 184.54504pt x 133.90906pt.
 
-Underfull \vbox (badness 5908) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./Locus_Whole_files/figure-latex/candidate_plot-1.pdf> <./Locus_Whole_file
-s/figure-latex/locus_plot-1.pdf>]
-Underfull \hbox (badness 4416) in paragraph at lines 913--914
-[]\T1/lmr/bx/n/10 Identify the tar-get\T1/lmr/m/n/10 (+20) : The tar-get is fou
-nd at
+ [15 <./Locus_Whole_files/figure-latex/candidate_plot-1.pdf> <./Locus_Whole_fil
+es/figure-latex/locus_plot-1.pdf>] [16]
+Overfull \hbox (43.09465pt too wide) in paragraph at lines 917--918
+[]\T1/lmr/bx/n/10 Define a Can-di-date Zone\T1/lmr/m/n/10 (-20) : The CZ around
+ the tar-get is de-fined by ($[]$,
  []
 
-
-Underfull \hbox (badness 5374) in paragraph at lines 917--918
-[]\T1/lmr/bx/n/10 Define a Can-di-date Zone\T1/lmr/m/n/10 (+20) : The CZ around
-
+[17]
+Overfull \hbox (68.88225pt too wide) in paragraph at lines 929--930
+\T1/lmr/m/n/10 (-20) high-est score can be de-ter-mined to be the point-ing use
+d in this ex-am-ple at ($[]\OML/lmm/m/it/10 ; []$\T1/lmr/m/n/10 (-20) )
  []
 
-
-Underfull \hbox (badness 1168) in paragraph at lines 917--918
-\T1/lmr/m/n/10 (+20) the tar-get is de-fined by ($[]$,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 919--920
-[]\T1/lmr/bx/n/10 Filter Can-di-date Ref-er-ences\T1/lmr/m/n/10 (+20) : A can-d
-i-date
- []
-
-
-Underfull \hbox (badness 8038) in paragraph at lines 919--920
-\T1/lmr/m/n/10 (+20) ref-er-ence must meet the fol-low-ing fil-ter-ing cri-te-
- []
-
-
-Underfull \hbox (badness 4378) in paragraph at lines 919--920
-\T1/lmr/m/n/10 (+20) ria ($[]$), ($[]$) and
- []
-
-[9] (./Locus_Whole.bbl) [10
-
-] (./Locus_Whole.aux) ) 
+[18] (./Locus_Whole_ref.bbl) [19] (./Locus_Whole_ref.aux) ) 
 Here is how much of TeX's memory you used:
- 10637 strings out of 492982
- 155771 string characters out of 6134896
- 293119 words of memory out of 5000000
- 13724 multiletter control sequences out of 15000+600000
- 128112 words of font info for 198 fonts, out of 8000000 for 9000
+ 10673 strings out of 492982
+ 156443 string characters out of 6134896
+ 289293 words of memory out of 5000000
+ 13774 multiletter control sequences out of 15000+600000
+ 124018 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,47p,1701b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
-lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/
-fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.en
-c}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmro9.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Locus_Whole.pdf (10 pages, 688434 bytes).
+ 39i,14n,47p,1705b,382s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fo
+nts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{
+/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/l
+mbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmtt9.pfb>
+Output written on Locus_Whole_ref.pdf (19 pages, 664401 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 187 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 45611 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 43563 words of extra memory for PDF output out of 51595 (max. 10000000)
 
